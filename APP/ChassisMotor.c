@@ -175,6 +175,14 @@ static void chassis_feedback_update(chassis_move_t *chassis_move_update)
     chassis_move_update->vx = (-chassis_move_update->motor_chassis[0].speed + chassis_move_update->motor_chassis[1].speed - chassis_move_update->motor_chassis[2].speed + chassis_move_update->motor_chassis[3].speed) * MOTOR_SPEED_TO_CHASSIS_SPEED_VX;
     chassis_move_update->vy = (chassis_move_update->motor_chassis[0].speed + chassis_move_update->motor_chassis[1].speed - chassis_move_update->motor_chassis[2].speed - chassis_move_update->motor_chassis[3].speed) * MOTOR_SPEED_TO_CHASSIS_SPEED_VY;
     chassis_move_update->wz = -(chassis_move_update->motor_chassis[0].speed + chassis_move_update->motor_chassis[1].speed + chassis_move_update->motor_chassis[2].speed + chassis_move_update->motor_chassis[3].speed) / (2*(CHASSIS_LENGTH+CHASSIS_WIDTH));
+
+    //计算底盘姿态角度
+    chassis_move_update->chassis_yaw = rad_format(chassis_move_update->chassis_yaw_motor->relative_angle);
+    chassis_move_update->chassis_pitch = rad_format(chassis_move_update->chassis_pitch_motor->relative_angle);
+//    chassis_move_update->chassis_yaw = rad_format(*(chassis_move_update->chassis_INS_angle + INS_YAW_ADDRESS_OFFSET) - chassis_move_update->chassis_yaw_motor->relative_angle);
+//    chassis_move_update->chassis_pitch = rad_format(*(chassis_move_update->chassis_INS_angle + INS_PITCH_ADDRESS_OFFSET) - chassis_move_update->chassis_pitch_motor->relative_angle);
+//    chassis_move_update->chassis_roll = *(chassis_move_update->chassis_INS_angle + INS_ROLL_ADDRESS_OFFSET);
+
 }
 /**
   * @brief		将遥控器数据处理成底盘前进的vx速度，vy速度
