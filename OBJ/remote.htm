@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\remote.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\remote.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Apr 04 21:07:37 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Fri Apr 05 19:31:28 2019
 <BR><P>
 <H3>Maximum Stack Usage =        164 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -577,19 +577,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Task
 </UL>
 
-<P><STRONG><a name="[b4]"></a>CloudMotor_Out</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, cloudmotor.o(i.CloudMotor_Out))
+<P><STRONG><a name="[b4]"></a>CloudMotor_Out</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, cloudmotor.o(i.CloudMotor_Out))
 <BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TriggerMotor_Out
 </UL>
 
 <P><STRONG><a name="[92]"></a>Control_Task</STRONG> (Thumb, 372 bytes, Stack size 8 bytes, control_task.o(i.Control_Task))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Control_Task &rArr; TriggerMotor_Out &rArr; Set_CloudMotor_Current &rArr; CAN_Transmit
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Control_Task &rArr; chassis_control_loop &rArr; Set_ChassisMotor_Current &rArr; CAN_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TriggerMotor_Out
+<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_control_loop
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CloudMotor_Ctrl
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TriggerMotor_Out
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TriggerMotor_Ctrl
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fric2_on
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fric1_on
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_control_loop
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CloudMotor_Ctrl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM6_DAC_IRQHandler
 </UL>
@@ -693,10 +693,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b3]"></a>PID_Calc</STRONG> (Thumb, 492 bytes, Stack size 0 bytes, pid.o(i.PID_Calc))
-<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TriggerMotor_Ctrl
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_set_contorl
+<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_set_contorl
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gimbal_motor_relative_angle_control
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_control_loop
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TriggerMotor_Ctrl
 </UL>
 
 <P><STRONG><a name="[8d]"></a>PID_Init</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, pid.o(i.PID_Init))
@@ -816,7 +816,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[40]"></a>TIM6_DAC_IRQHandler</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, main.o(i.TIM6_DAC_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; Control_Task &rArr; TriggerMotor_Out &rArr; Set_CloudMotor_Current &rArr; CAN_Transmit
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; Control_Task &rArr; chassis_control_loop &rArr; Set_ChassisMotor_Current &rArr; CAN_Transmit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_remote_control_point
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetITStatus
@@ -904,8 +904,8 @@ Global Symbols
 <P><STRONG><a name="[97]"></a>TriggerMotor_Out</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, shoot.o(i.TriggerMotor_Out))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = TriggerMotor_Out &rArr; Set_CloudMotor_Current &rArr; CAN_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CloudMotor_Out
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_CloudMotor_Current
+<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_CloudMotor_Current
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CloudMotor_Out
 </UL>
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Task
 </UL>
@@ -1003,12 +1003,12 @@ Global Symbols
 <P><STRONG><a name="[95]"></a>chassis_control_loop</STRONG> (Thumb, 202 bytes, Stack size 16 bytes, chassismotor.o(i.chassis_control_loop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = chassis_control_loop &rArr; Set_ChassisMotor_Current &rArr; CAN_Transmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_ChassisMotor_Current
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_ChassisMotor_Current
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_rc_to_control_vector
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_vector_to_mecanum_wheel_speed
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_set_contorl
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_feedback_update
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Task
 </UL>
@@ -1018,10 +1018,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_remote_control_point
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;first_order_filter_init
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Init
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_feedback_update
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_yaw_motor_point
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_pitch_motor_point
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_init
 </UL>
@@ -1078,9 +1078,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = fric_PWM_configuration &rArr; GPIO_PinAFConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphResetCmd
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
@@ -1227,7 +1227,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8f]"></a>GIMBAL_Feedback_Update</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, cloudmotor.o(i.GIMBAL_Feedback_Update))
+<P><STRONG><a name="[8f]"></a>GIMBAL_Feedback_Update</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, cloudmotor.o(i.GIMBAL_Feedback_Update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GIMBAL_Feedback_Update
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_ecd_to_angle_change
@@ -1235,7 +1235,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CloudMotor_Ctrl
 </UL>
 
-<P><STRONG><a name="[d4]"></a>GIMBAL_PID_Calc</STRONG> (Thumb, 638 bytes, Stack size 0 bytes, cloudmotor.o(i.GIMBAL_PID_Calc))
+<P><STRONG><a name="[d4]"></a>GIMBAL_PID_Calc</STRONG> (Thumb, 634 bytes, Stack size 0 bytes, cloudmotor.o(i.GIMBAL_PID_Calc))
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gimbal_motor_relative_angle_control
 </UL>
 
@@ -1255,8 +1255,8 @@ Local Symbols
 <P><STRONG><a name="[91]"></a>gimbal_motor_relative_angle_control</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, cloudmotor.o(i.gimbal_motor_relative_angle_control))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gimbal_motor_relative_angle_control
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GIMBAL_PID_Calc
+<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GIMBAL_PID_Calc
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CloudMotor_Ctrl
 </UL>
@@ -1278,9 +1278,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = chassis_set_contorl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fp32_constrain
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_sin_f32
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_cos_f32
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_control_loop
 </UL>

@@ -52,7 +52,7 @@ I (..\APP\Encoder.h)(0x5C911331)
 I (..\APP\Control_Task.h)(0x5C823F72)
 I (..\FUNCTION\APP\remote_control\Remote_Control.h)(0x5C850C88)
 I (..\APP\ChassisMotor.h)(0x5CA4CA5C)
-I (..\APP\CloudMotor.h)(0x5CA4DC23)
+I (..\APP\CloudMotor.h)(0x5CA73852)
 I (..\FUNCTION\DSP\Include\arm_math.h)(0x581CC64D)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x588B8344)
@@ -1933,7 +1933,7 @@ I (..\FWLIB\inc\stm32f4xx_fmc.h)(0x5C4005AE)
 I (..\FWLIB\inc\stm32f4xx_sai.h)(0x5C4005AE)
 I (..\USER\main.h)(0x5C6610C8)
 I (..\APP\Encoder.h)(0x5C911331)
-I (..\APP\CloudMotor.h)(0x5CA4DC23)
+I (..\APP\CloudMotor.h)(0x5CA73852)
 I (..\FUNCTION\DSP\Include\arm_math.h)(0x581CC64D)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x588B8344)
@@ -1991,7 +1991,7 @@ I (..\USER\main.h)(0x5C6610C8)
 I (..\APP\Control_Task.h)(0x5C823F72)
 I (..\FUNCTION\APP\remote_control\Remote_Control.h)(0x5C850C88)
 I (..\FUNCTION\hardware\rc\rc.h)(0x5C39CA75)
-I (..\APP\CloudMotor.h)(0x5CA4DC23)
+I (..\APP\CloudMotor.h)(0x5CA73852)
 I (..\FUNCTION\DSP\Include\arm_math.h)(0x581CC64D)
 I (..\CORE\core_cm4.h)(0x5C4005AE)
 I (E:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5C0FC263)
@@ -2043,8 +2043,8 @@ I (..\SYSTEM\usart\usart.h)(0x5C41BA3C)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (..\APP\ChassisMotor.h)(0x5CA4CA5C)
 I (..\SYSTEM\delay\delay.h)(0x5C4005AE)
-F (..\APP\CloudMotor.c)(0x5CA5FDDD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\FWLIB\inc -I ..\USER -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\FUNCTION\DSP\Include -I ..\FUNCTION\user_lib -I ..\FUNCTION\hardware\rc -I ..\FUNCTION\hardware\can -I ..\FUNCTION\hardware\rng -I ..\FUNCTION\hardware\laser -I ..\FUNCTION\hardware\timer -I ..\FUNCTION\hardware\fric -I ..\FUNCTION\APP\pid -I ..\FUNCTION\APP\remote_control -I ..\FUNCTION\APP\CAN_receive -I ..\FUNCTION\APP\chassis_task -I ..\FUNCTION\APP\gimbal_task -I ..\FUNCTION\APP\shoot -I ..\FUNCTION\hardware\power_ctrl -I ..\APP-I.\RTE\_Target_1-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IE:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F427xx -DUSE_STDPERIPH_DRIVER -DSTM32F427X -D__FPU_USED -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o ..\obj\cloudmotor.o --omf_browse ..\obj\cloudmotor.crf --depend ..\obj\cloudmotor.d)
-I (..\APP\CloudMotor.h)(0x5CA4DC23)
+F (..\APP\CloudMotor.c)(0x5CA73C8B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\FWLIB\inc -I ..\USER -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\FUNCTION\DSP\Include -I ..\FUNCTION\user_lib -I ..\FUNCTION\hardware\rc -I ..\FUNCTION\hardware\can -I ..\FUNCTION\hardware\rng -I ..\FUNCTION\hardware\laser -I ..\FUNCTION\hardware\timer -I ..\FUNCTION\hardware\fric -I ..\FUNCTION\APP\pid -I ..\FUNCTION\APP\remote_control -I ..\FUNCTION\APP\CAN_receive -I ..\FUNCTION\APP\chassis_task -I ..\FUNCTION\APP\gimbal_task -I ..\FUNCTION\APP\shoot -I ..\FUNCTION\hardware\power_ctrl -I ..\APP-I.\RTE\_Target_1-IE:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IE:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F427xx -DUSE_STDPERIPH_DRIVER -DSTM32F427X -D__FPU_USED -D__FPU_PRESENT -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o ..\obj\cloudmotor.o --omf_browse ..\obj\cloudmotor.crf --depend ..\obj\cloudmotor.d)
+I (..\APP\CloudMotor.h)(0x5CA73852)
 I (..\USER\main.h)(0x5C6610C8)
 I (..\FUNCTION\DSP\Include\arm_math.h)(0x581CC64D)
 I (..\CORE\core_cm4.h)(0x5C4005AE)
@@ -2138,7 +2138,7 @@ I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x5C4005AE)
 I (..\FWLIB\inc\stm32f4xx_dma2d.h)(0x5C4005AE)
 I (..\FWLIB\inc\stm32f4xx_fmc.h)(0x5C4005AE)
 I (..\FWLIB\inc\stm32f4xx_sai.h)(0x5C4005AE)
-I (..\APP\CloudMotor.h)(0x5CA4DC23)
+I (..\APP\CloudMotor.h)(0x5CA73852)
 I (..\FUNCTION\DSP\Include\arm_math.h)(0x581CC64D)
 I (E:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x588B8344)
