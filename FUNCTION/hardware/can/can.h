@@ -25,8 +25,8 @@
 #define CAN_ID_PITCH 0x206
 
 //拨轮电机can id
-#define CAN_ID_TRIGGER 0x207
-
+#define CAN_ID_TRIGGER_17 0x207
+#define CAN_ID_TRIGGER_42 0x208
 
 void CAN_Configure(void);
 void CanReceiveMsgProcess(CanRxMsg *message);

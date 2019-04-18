@@ -2,9 +2,13 @@
 #define FRIC_H
 #include "main.h"
 
-#define Fric_UP 1400
-#define Fric_DOWN 1050//1300
-#define Fric_OFF 1000
+//snail  1100
+//2312   1600
+//MT4114 1850
+
+#define Fric_UP 1180
+#define Fric_DOWN 1350//1300
+#define Fric_OFF 800
 
 extern void fric_PWM_configuration(void);
 extern void fric_off(void);

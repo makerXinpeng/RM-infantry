@@ -8,7 +8,8 @@ volatile Encoder CMEncoder[4] = {{0,0,0,0,0,0,0,0,0,0},
                                 {0,0,0,0,0,0,0,0,0,0}};
 volatile Encoder GMYawEncoder =  {0,0,0,0,0,0,0,0,0,0};
 volatile Encoder GMPitchEncoder = {0,0,0,0,0,0,0,0,0,0};
-volatile Encoder TREncoder =     {0,0,0,0,0,0,0,0,0,0};
+volatile Encoder TR1Encoder =     {0,0,0,0,0,0,0,0,0,0};
+volatile Encoder TR2Encoder =     {0,0,0,0,0,0,0,0,0,0};
 
 /**
   *****************************************************************************
@@ -59,9 +60,14 @@ void CanReceiveMsgProcess(CanRxMsg *message)
         getEncoderData(&GMYawEncoder, message);
         break;
     }
-    case CAN_ID_TRIGGER:
+    case CAN_ID_TRIGGER_17:
     {
-        getEncoderData(&TREncoder, message);
+        getEncoderData(&TR1Encoder, message);
+        break;
+    }
+    case CAN_ID_TRIGGER_42:
+    {
+        getEncoderData(&TR2Encoder, message);
         break;
     }
     }
@@ -84,8 +90,8 @@ void CanReceiveMsgProcess(CanRxMsg *message)
   */
 void getEncoderData(volatile Encoder *v, CanRxMsg * msg)
 {
-    int i=0;
-    int32_t temp_sum = 0;
+    //int i=0;
+    //int32_t temp_sum = 0;
     v->last_raw_value = v->raw_value;
     v->raw_value = (msg->Data[0]<<8)|msg->Data[1];
     v->rpm = ((msg->Data[2]<<8)|(msg->Data[3]));
@@ -113,12 +119,12 @@ void getEncoderData(volatile Encoder *v, CanRxMsg * msg)
     {
         v->buf_count = 0;
     }
-    //计算速度平均值
-    for(i = 0; i < RATE_BUF_SIZE; i++)
-    {
-        temp_sum += v->rate_buf[i];
-    }
-    v->filter_rate = (int32_t)(temp_sum/RATE_BUF_SIZE);
+//    //计算速度平均值
+//    for(i = 0; i < RATE_BUF_SIZE; i++)
+//    {
+//        temp_sum += v->rate_buf[i];
+//    }
+//    v->filter_rate = (int32_t)(temp_sum/RATE_BUF_SIZE);
 }
 
 /**

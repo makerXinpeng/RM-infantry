@@ -25,67 +25,36 @@
         }                      \
     }
 
-static fp32 pwm1=1000;
-static fp32 pwm2=1000;
-static fp32 count[6]= {0,0,0,0,0,0};
-//todo 把遥控器数据传输改到各个模块内部
+static fp32 count[2]= {0,0};
 void Control_Task(RC_ctrl_t *Rc)
 {
     //ch    0   1   2   3
     //通道 右x 右y 左x 左y
     if(Rc->key.v & KEY_PRESSED_OFFSET_Q)
     {
-        if(count[4]>-660)
+        if(count[0]>-660)
         {
-            count[4]-=10;
+            count[0]-=10;
         }
-        Rc->rc.ch[0]=count[4];
+        Rc->rc.ch[0]=count[0];
     }
     else
     {
-        count[4]=0;
+        count[0]=0;
     }
     if(Rc->key.v & KEY_PRESSED_OFFSET_E)
     {
-        if(count[5]<660)
+        if(count[1]<660)
         {
-            count[5]+=10;
+            count[1]+=10;
         }
-        Rc->rc.ch[0]=count[5];
+        Rc->rc.ch[0]=count[1];
     }
     else
     {
-        count[5]=0;
-    }
-
-    if(Rc->rc.s[1] == 1)
-    {
-        if(pwm1<1100)//1850)//1600-2312)//1180 snail)
-        {
-            pwm1+=2;
-            fric1_on(pwm1);
-        }
-        else if(pwm2<1100)
-        {
-            pwm2+=2;
-            fric2_on(pwm2);
-        }
-        else
-        {
-            fric1_on(pwm1);
-            fric2_on(pwm2);
-        }
-    }
-    else
-    {
-        fric1_on(500);
-        fric2_on(500);
-        pwm1=1000;
-        pwm2=1000;
+        count[1]=0;
     }
     chassis_control_loop();
     CloudMotor_Ctrl();
-
-    TriggerMotor_Ctrl(Rc);
-    TriggerMotor_Out();
+    shoot_control_loop();
 }

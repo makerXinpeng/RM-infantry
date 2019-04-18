@@ -11,14 +11,14 @@
 #include "remote_control.h"
 #include "shoot.h"
 //pitch 速度环 PID参数以及 PID最大输出，积分输出
-#define PITCH_SPEED_PID_KP 2000.0f
+#define PITCH_SPEED_PID_KP 900.0f//英雄2000.0f
 #define PITCH_SPEED_PID_KI 20.0f
 #define PITCH_SPEED_PID_KD 0.0f
 #define PITCH_SPEED_PID_MAX_OUT 30000.0f
 #define PITCH_SPEED_PID_MAX_IOUT 5000.0f
 
 //yaw 速度环 PID参数以及 PID最大输出，积分输出
-#define YAW_SPEED_PID_KP 2500.0f//2200.0f
+#define YAW_SPEED_PID_KP 2000.0f//2200.0f
 #define YAW_SPEED_PID_KI 20.0f
 #define YAW_SPEED_PID_KD 0.0f
 #define YAW_SPEED_PID_MAX_OUT 30000.0f
@@ -40,18 +40,18 @@
 #define YAW_GYRO_ABSOLUTE_PID_MAX_IOUT 0.0f
 
 //pitch 角度环 角度由编码器 PID参数以及 PID最大输出，积分输出
-#define PITCH_ENCODE_RELATIVE_PID_KP 15.0f
-#define PITCH_ENCODE_RELATIVE_PID_KI 0.00f
-#define PITCH_ENCODE_RELATIVE_PID_KD 0.0f
+#define PITCH_ENCODE_RELATIVE_PID_KP 45.0f
+#define PITCH_ENCODE_RELATIVE_PID_KI 0.0f
+#define PITCH_ENCODE_RELATIVE_PID_KD 15.0f
 
-#define PITCH_ENCODE_RELATIVE_PID_MAX_OUT 10.0f
+#define PITCH_ENCODE_RELATIVE_PID_MAX_OUT 15.0f
 #define PITCH_ENCODE_RELATIVE_PID_MAX_IOUT 0.0f
 
 //yaw 角度环 角度由编码器 PID参数以及 PID最大输出，积分输出
-#define YAW_ENCODE_RELATIVE_PID_KP 8.0f
+#define YAW_ENCODE_RELATIVE_PID_KP 40.0//8.0f
 #define YAW_ENCODE_RELATIVE_PID_KI 0.0f
-#define YAW_ENCODE_RELATIVE_PID_KD 0.0f
-#define YAW_ENCODE_RELATIVE_PID_MAX_OUT 10.0f
+#define YAW_ENCODE_RELATIVE_PID_KD 30.0f
+#define YAW_ENCODE_RELATIVE_PID_MAX_OUT 18.0f
 #define YAW_ENCODE_RELATIVE_PID_MAX_IOUT 0.0f
 
 //任务初始化 空闲一段时间
@@ -69,11 +69,11 @@
 //遥控器输入死区，因为遥控器存在差异，摇杆在中间，其值不一定为零
 #define RC_deadband 10
 //yaw，pitch角度与遥控器输入比例
-#define Yaw_RC_SEN -0.000005f
-#define Pitch_RC_SEN -0.000006f //0.005
+#define Yaw_RC_SEN -0.00005f//-0.000005f
+#define Pitch_RC_SEN -0.00006f//-0.000006f //0.005
 //yaw,pitch角度和鼠标输入的比例
-#define Yaw_Mouse_Sen 0.00005f
-#define Pitch_Mouse_Sen 0.00015f
+#define Yaw_Mouse_Sen 0.0005f//0.00005f
+#define Pitch_Mouse_Sen 0.0015f//0.00015f
 //云台编码器控制时候使用的比例
 #define Yaw_Encoder_Sen 0.01f
 #define Pitch_Encoder_Sen 0.01f
@@ -209,6 +209,5 @@ extern volatile Encoder GMPitchEncoder;
 
 void CloudMotor_Config(void);
 void CloudMotor_Ctrl(void);
-int16_t* CloudMotor_Out(void);
 static fp32 GIMBAL_PID_Calc(PidTypeDef *pid, fp32 ref, fp32 set);
 #endif //CLOUDMOTOR_H

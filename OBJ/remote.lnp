@@ -50,6 +50,7 @@
 "..\obj\timer.o"
 "..\obj\fric.o"
 "..\obj\power_ctrl.o"
+"..\obj\adc.o"
 "..\obj\remote_control.o"
 "..\obj\pid.o"
 "..\obj\shoot.o"
