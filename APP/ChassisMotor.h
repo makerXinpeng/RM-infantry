@@ -90,8 +90,8 @@
 #define CHASSIS_FOLLOW_GIMBAL_PID_MAX_IOUT 0.2f
 
 //ÂÖ×ÓÖáÐÄ³¤¿í
-#define CHASSIS_LENGTH 0.31f
-#define CHASSIS_WIDTH  0.46f
+#define CHASSIS_LENGTH 0.415f
+#define CHASSIS_WIDTH  0.39f
 typedef enum
 {
     CHASSIS_VECTOR_FOLLOW_GIMBAL_YAW,

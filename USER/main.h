@@ -55,4 +55,6 @@ typedef double fp64;
 #define PI 3.14159265358979f
 #endif
 
+#define CLOCK_TIME 50000
+
 #endif /* __MAIN_H */

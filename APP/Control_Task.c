@@ -12,6 +12,8 @@
 #include "usart.h"
 
 #include "arm_math.h"
+#include "judgement_info.h"
+
 
 #define LimitMax(input, max)   \
     {                          \
@@ -56,5 +58,4 @@ void Control_Task(RC_ctrl_t *Rc)
     }
     chassis_control_loop();
     CloudMotor_Ctrl();
-    shoot_control_loop();
 }

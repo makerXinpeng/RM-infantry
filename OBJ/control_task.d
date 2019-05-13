@@ -58,3 +58,4 @@
 ..\obj\control_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\control_task.o: ..\APP\ChassisMotor.h
 ..\obj\control_task.o: ..\SYSTEM\delay\delay.h
+..\obj\control_task.o: ..\FUNCTION\judge_sys\judgement_info.h

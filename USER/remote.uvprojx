@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F427X,__FPU_USED,__FPU_PRESENT,ARM_MATH_CM4,__CC_ARM,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\FWLIB\inc;..\USER;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\FUNCTION\DSP\Include;..\FUNCTION\user_lib;..\FUNCTION\hardware\rc;..\FUNCTION\hardware\can;..\FUNCTION\hardware\rng;..\FUNCTION\hardware\laser;..\FUNCTION\hardware\timer;..\FUNCTION\hardware\fric;..\FUNCTION\hardware\adc;..\FUNCTION\APP\pid;..\FUNCTION\APP\remote_control;..\FUNCTION\APP\CAN_receive;..\FUNCTION\APP\chassis_task;..\FUNCTION\APP\gimbal_task;..\FUNCTION\APP\shoot;..\FUNCTION\hardware\power_ctrl;..\APP</IncludePath>
+              <IncludePath>..\CORE;..\FWLIB\inc;..\USER;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\FUNCTION\DSP\Include;..\FUNCTION\user_lib;..\FUNCTION\hardware\rc;..\FUNCTION\hardware\can;..\FUNCTION\hardware\rng;..\FUNCTION\hardware\laser;..\FUNCTION\hardware\timer;..\FUNCTION\hardware\fric;..\FUNCTION\hardware\adc;..\FUNCTION\APP\pid;..\FUNCTION\APP\remote_control;..\FUNCTION\APP\CAN_receive;..\FUNCTION\APP\chassis_task;..\FUNCTION\APP\gimbal_task;..\FUNCTION\APP\shoot;..\FUNCTION\hardware\power_ctrl;..\APP;..\FUNCTION\judge_sys</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -709,6 +709,36 @@
               <FileName>ChassisMotor.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\ChassisMotor.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>judge_system</GroupName>
+          <Files>
+            <File>
+              <FileName>communicate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\judge_sys\communicate.c</FilePath>
+            </File>
+            <File>
+              <FileName>data_fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\judge_sys\data_fifo.c</FilePath>
+            </File>
+            <File>
+              <FileName>judgement_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\judge_sys\judgement_info.c</FilePath>
+            </File>
+            <File>
+              <FileName>JudgeSystem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\judge_sys\JudgeSystem.c</FilePath>
+            </File>
+            <File>
+              <FileName>protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\judge_sys\protocol.c</FilePath>
             </File>
           </Files>
         </Group>

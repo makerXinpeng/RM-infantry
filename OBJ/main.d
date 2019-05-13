@@ -61,3 +61,8 @@
 ..\obj\main.o: ..\FUNCTION\APP\pid\pid.h
 ..\obj\main.o: ..\FUNCTION\APP\shoot\shoot.h
 ..\obj\main.o: ..\APP\CloudMotor.h
+..\obj\main.o: ..\FUNCTION\judge_sys\judgeSystem.h
+..\obj\main.o: ..\FUNCTION\judge_sys\data_fifo.h
+..\obj\main.o: ..\FUNCTION\judge_sys\protocol.h
+..\obj\main.o: ..\FUNCTION\judge_sys\communicate.h
+..\obj\main.o: ..\FUNCTION\judge_sys\judgement_info.h

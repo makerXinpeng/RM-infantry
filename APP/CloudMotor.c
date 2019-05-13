@@ -71,9 +71,9 @@ void CloudMotor_Config(void)
     PID_Init(&gimbal_control.gimbal_yaw_motor.gimbal_motor_speed_pid,PID_POSITION,YAW_SpeedPID,YAW_SPEED_PID_MAX_OUT,YAW_SPEED_PID_MAX_IOUT);
     PID_Init(&gimbal_control.gimbal_yaw_motor.gimbal_motor_position_pid,PID_POSITION,YAW_PositionPID,YAW_ENCODE_RELATIVE_PID_MAX_OUT,YAW_ENCODE_RELATIVE_PID_MAX_IOUT);    
     //yaw电机限幅
-    gimbal_control.gimbal_yaw_motor.max_relative_angle = 0.8;
-    gimbal_control.gimbal_yaw_motor.min_relative_angle = -0.8;
-    gimbal_control.gimbal_yaw_motor.offset_ecd = 4096;
+    gimbal_control.gimbal_yaw_motor.max_relative_angle = 7;//官方步兵： 旧步兵：0.8
+    gimbal_control.gimbal_yaw_motor.min_relative_angle = -7;//官方步兵： 旧步兵：-0.8
+    gimbal_control.gimbal_yaw_motor.offset_ecd = 4096;//官方步兵320 旧步兵4096
     //yaw电机数据初始化
     gimbal_control.gimbal_yaw_motor.relative_angle_set = 0;
     gimbal_control.gimbal_yaw_motor.motor_gyro_set = gimbal_control.gimbal_yaw_motor.motor_gyro;
@@ -83,9 +83,9 @@ void CloudMotor_Config(void)
     PID_Init(&gimbal_control.gimbal_pitch_motor.gimbal_motor_speed_pid,PID_POSITION,PITCH_SpeedPID,PITCH_SPEED_PID_MAX_OUT,PITCH_SPEED_PID_MAX_IOUT);
     PID_Init(&gimbal_control.gimbal_pitch_motor.gimbal_motor_position_pid,PID_POSITION,PITCH_PositionPID,PITCH_ENCODE_RELATIVE_PID_MAX_OUT,PITCH_ENCODE_RELATIVE_PID_MAX_IOUT);
     //pitch电机限幅
-    gimbal_control.gimbal_pitch_motor.max_relative_angle = 0.8;//向下限幅
-    gimbal_control.gimbal_pitch_motor.min_relative_angle = -1.6;//向上限幅
-    gimbal_control.gimbal_pitch_motor.offset_ecd = 5500;//步兵5500 英雄 4596
+    gimbal_control.gimbal_pitch_motor.max_relative_angle = 0.8;//向下限幅  旧步兵：0.8  官方步兵：0.4
+    gimbal_control.gimbal_pitch_motor.min_relative_angle = -1.6;//向上限幅 旧步兵：-1.6 官方步兵：-0.3
+    gimbal_control.gimbal_pitch_motor.offset_ecd = 4096;//官方步兵6200 旧步兵4096 英雄 4096
     //pitch电机数据初始化
     gimbal_control.gimbal_pitch_motor.relative_angle_set = 0;
     gimbal_control.gimbal_pitch_motor.motor_gyro_set = gimbal_control.gimbal_pitch_motor.motor_gyro;
@@ -170,6 +170,10 @@ static void GIMBAL_relative_angle_limit(Gimbal_Motor_t *gimbal_motor, fp32 add)
         return;
     }
     gimbal_motor->relative_angle_set += add;
+    if(gimbal_motor->relative_angle_set>PI)
+        gimbal_motor->relative_angle_set=gimbal_motor->relative_angle_set - 2*PI;
+    else if(gimbal_motor->relative_angle_set<-PI)
+        gimbal_motor->relative_angle_set=gimbal_motor->relative_angle_set + 2*PI;
     //是否超过最大 最小值
     if (gimbal_motor->relative_angle_set > gimbal_motor->max_relative_angle)
     {

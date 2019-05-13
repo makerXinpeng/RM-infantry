@@ -25,11 +25,11 @@
 #define SHOOT_OFF_KEYBOARD KEY_PRESSED_OFFSET_R
 
 //射击完成后 子弹弹出去后，判断时间，以防误触发
-#define SHOOT_DONE_KEY_OFF_TIME 10
+#define SHOOT_DONE_KEY_OFF_TIME 2//20
 //鼠标长按判断
-#define PRESS_LONG_TIME 400
+#define PRESS_LONG_TIME 200
 //遥控器射击开关打下档一段时间后 连续发射子弹 用于清单
-#define RC_S_LONG_TIME 20
+#define RC_S_LONG_TIME 400//2000
 //摩擦轮高速 加速 时间
 #define UP_ADD_TIME 80
 //电机反馈码盘值范围
@@ -40,16 +40,16 @@
 #define Motor_ECD_TO_ANGLE 0.000021305288720633905968306772076277f
 #define FULL_COUNT 18
 //拨弹速度
-#define TRIGGER_SPEED 5.0f
-#define Ready_Trigger_Speed 6.0f
+#define TRIGGER_SPEED 8.0f
+#define Ready_Trigger_Speed 5.0f
 
-#define KEY_OFF_JUGUE_TIME 200
-#define SWITCH_TRIGGER_ON 0   //开关按下
-#define SWITCH_TRIGGER_OFF 1  //开关开启
+#define KEY_OFF_JUGUE_TIME 20//500
+#define SWITCH_TRIGGER_ON 0   
+#define SWITCH_TRIGGER_OFF 1  
 
 //卡单时间 以及反转时间
-#define BLOCK_TIME 700
-#define REVERSE_TIME 500
+#define BLOCK_TIME 500
+#define REVERSE_TIME 200
 #define REVERSE_SPEED_LIMIT 13.0f
 
 #define PI_Four 0.78539816339744830961566084581988f
@@ -58,13 +58,13 @@
 //拨弹轮电机PID
 #define TRIGGER_ANGLE_PID_KP 800.0f
 #define TRIGGER_ANGLE_PID_KI 0.5f
-#define TRIGGER_ANGLE_PID_KD 30.0f
+#define TRIGGER_ANGLE_PID_KD 0.0f
 
 #define TRIGGER_BULLET_PID_MAX_OUT 15000.0f
 #define TRIGGER_BULLET_PID_MAX_IOUT 5000.0f
 
-#define TRIGGER_READY_PID_MAX_OUT 15000.0f//5000.0f
-#define TRIGGER_READY_PID_MAX_IOUT 5000.0f//2500.0f
+#define TRIGGER_READY_PID_MAX_OUT 5000.0f
+#define TRIGGER_READY_PID_MAX_IOUT 2500.0f
 
 typedef struct
 {

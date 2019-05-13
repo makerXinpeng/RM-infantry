@@ -11,14 +11,14 @@
 #include "remote_control.h"
 #include "shoot.h"
 //pitch 速度环 PID参数以及 PID最大输出，积分输出
-#define PITCH_SPEED_PID_KP 900.0f//英雄2000.0f
+#define PITCH_SPEED_PID_KP 900.0f//官方车：2000 旧步兵：900 英雄2000.0f
 #define PITCH_SPEED_PID_KI 20.0f
 #define PITCH_SPEED_PID_KD 0.0f
 #define PITCH_SPEED_PID_MAX_OUT 30000.0f
 #define PITCH_SPEED_PID_MAX_IOUT 5000.0f
 
 //yaw 速度环 PID参数以及 PID最大输出，积分输出
-#define YAW_SPEED_PID_KP 2000.0f//2200.0f
+#define YAW_SPEED_PID_KP 2200.0f//2200.0f
 #define YAW_SPEED_PID_KI 20.0f
 #define YAW_SPEED_PID_KD 0.0f
 #define YAW_SPEED_PID_MAX_OUT 30000.0f

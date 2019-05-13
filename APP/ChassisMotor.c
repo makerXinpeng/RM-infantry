@@ -86,7 +86,7 @@ void chassis_control_loop(void)
     //控制方式
     chassis_set_contorl(&chassis_move);
     //麦克纳姆轮运动分解
-    chassis_vector_to_mecanum_wheel_speed(chassis_move.vx_set,chassis_move.vy_set,chassis_move.chassis_RC->rc.ch[0]);
+    chassis_vector_to_mecanum_wheel_speed(-chassis_move.vx_set,-chassis_move.vy_set,chassis_move.chassis_RC->rc.ch[0]);
     //PID计算
     for (i = 0; i < 4; i++)
         PID_Calc(&chassis_move.motor_speed_pid[i],chassis_move.motor_chassis[i].speed,chassis_move.motor_chassis[i].speed_set);
@@ -94,8 +94,6 @@ void chassis_control_loop(void)
     for (i = 0; i < 4; i++)
     {
         chassis_move.motor_chassis[i].give_current = (int16_t)(chassis_move.motor_speed_pid[i].out);
-        if(chassis_move.motor_chassis[i].give_current>7500)
-            chassis_move.motor_chassis[i].give_current=7500;
     }
     Set_ChassisMotor_Current(chassis_move.motor_chassis[0].give_current,
                              chassis_move.motor_chassis[1].give_current,
@@ -228,9 +226,9 @@ static void chassis_set_contorl(chassis_move_t *chassis_move_control)
 static void chassis_vector_to_mecanum_wheel_speed(const fp32 vx_set, const fp32 vy_set, const fp32 wz_set)
 {
     fp32 speed_change=2.0f;
-//    if(chassis_move.chassis_RC->key.v & KEY_PRESSED_OFFSET_SHIFT || chassis_move.chassis_RC->rc.s[0]==1)
-//        speed_change=1.0f;
-//    else
+    if(chassis_move.chassis_RC->key.v & KEY_PRESSED_OFFSET_SHIFT)
+        speed_change=1.5f;
+    else
         speed_change=2.0f;
     chassis_move.motor_chassis[0].speed_set = - vx_set + vy_set + wz_set * CHASSIS_WZ_RC_SEN;
     chassis_move.motor_chassis[1].speed_set =   vx_set + vy_set + wz_set * CHASSIS_WZ_RC_SEN;
@@ -294,8 +292,8 @@ void chassis_rc_to_control_vector(fp32 *vx_set, fp32 *vy_set, chassis_move_t *ch
     rc_deadline_limit(chassis_move_rc_to_vector->chassis_RC->rc.ch[CHASSIS_X_CHANNEL], vx_channel, CHASSIS_RC_DEADLINE);
     rc_deadline_limit(chassis_move_rc_to_vector->chassis_RC->rc.ch[CHASSIS_Y_CHANNEL], vy_channel, CHASSIS_RC_DEADLINE);
 
-    vx_set_channel = vx_channel * CHASSIS_VX_RC_SEN;
-    vy_set_channel = vy_channel * -CHASSIS_VY_RC_SEN;
+    vx_set_channel = vx_channel * -CHASSIS_VX_RC_SEN;
+    vy_set_channel = vy_channel * CHASSIS_VY_RC_SEN;
 
     if (chassis_move_rc_to_vector->chassis_RC->key.v & CHASSIS_FRONT_KEY)
     {
