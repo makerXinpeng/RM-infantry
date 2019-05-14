@@ -3,9 +3,9 @@
 ..\obj\user_lib.o: ..\USER\main.h
 ..\obj\user_lib.o: ..\FUNCTION\DSP\Include\arm_math.h
 ..\obj\user_lib.o: ..\CORE\core_cm4.h
-..\obj\user_lib.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\user_lib.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\user_lib.o: ..\CORE\core_cmInstr.h
 ..\obj\user_lib.o: ..\CORE\core_cmFunc.h
 ..\obj\user_lib.o: ..\CORE\core_cm4_simd.h
-..\obj\user_lib.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\user_lib.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\user_lib.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\string.h
+..\obj\user_lib.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\math.h

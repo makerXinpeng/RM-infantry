@@ -232,7 +232,14 @@ static void chassis_vector_to_mecanum_wheel_speed(const fp32 vx_set, const fp32 
     if(chassis_move.chassis_RC->key.v & KEY_PRESSED_OFFSET_SHIFT)
         speed_change=1.5f;
     else
-        speed_change=2.0f;
+		{
+			if (judge_rece_mesg.power_heat_data.chassis_power > CHASSIS_MAXSPEED)
+			{
+					speed_change = judge_rece_mesg.power_heat_data.chassis_power / CHASSIS_MAXSPEED;
+
+			}
+			else speed_change = 2.0f;
+		}
     chassis_move.motor_chassis[0].speed_set = - vx_set + vy_set + wz_set * CHASSIS_WZ_RC_SEN;
     chassis_move.motor_chassis[1].speed_set =   vx_set + vy_set + wz_set * CHASSIS_WZ_RC_SEN;
     chassis_move.motor_chassis[2].speed_set = - vx_set - vy_set + wz_set * CHASSIS_WZ_RC_SEN;

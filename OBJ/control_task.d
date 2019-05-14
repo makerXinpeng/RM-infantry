@@ -6,12 +6,12 @@
 ..\obj\control_task.o: ..\APP\CloudMotor.h
 ..\obj\control_task.o: ..\FUNCTION\DSP\Include\arm_math.h
 ..\obj\control_task.o: ..\CORE\core_cm4.h
-..\obj\control_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\control_task.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\control_task.o: ..\CORE\core_cmInstr.h
 ..\obj\control_task.o: ..\CORE\core_cmFunc.h
 ..\obj\control_task.o: ..\CORE\core_cm4_simd.h
-..\obj\control_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\control_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\control_task.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\string.h
+..\obj\control_task.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\control_task.o: ..\FUNCTION\user_lib\user_lib.h
 ..\obj\control_task.o: ..\FUNCTION\hardware\can\can.h
 ..\obj\control_task.o: ..\SYSTEM\sys\sys.h
@@ -55,7 +55,7 @@
 ..\obj\control_task.o: ..\FUNCTION\hardware\laser\laser.h
 ..\obj\control_task.o: ..\FUNCTION\hardware\fric\fric.h
 ..\obj\control_task.o: ..\SYSTEM\usart\usart.h
-..\obj\control_task.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\control_task.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\control_task.o: ..\APP\ChassisMotor.h
-..\obj\control_task.o: ..\SYSTEM\delay\delay.h
 ..\obj\control_task.o: ..\FUNCTION\judge_sys\judgement_info.h
+..\obj\control_task.o: ..\SYSTEM\delay\delay.h

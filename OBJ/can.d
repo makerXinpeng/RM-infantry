@@ -3,7 +3,7 @@
 ..\obj\can.o: ..\SYSTEM\sys\sys.h
 ..\obj\can.o: ..\USER\stm32f4xx.h
 ..\obj\can.o: ..\CORE\core_cm4.h
-..\obj\can.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\can.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\can.o: ..\CORE\core_cmInstr.h
 ..\obj\can.o: ..\CORE\core_cmFunc.h
 ..\obj\can.o: ..\CORE\core_cm4_simd.h
@@ -41,4 +41,4 @@
 ..\obj\can.o: ..\USER\main.h
 ..\obj\can.o: ..\APP\Encoder.h
 ..\obj\can.o: ..\SYSTEM\usart\usart.h
-..\obj\can.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\can.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdio.h

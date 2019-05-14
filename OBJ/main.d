@@ -3,7 +3,7 @@
 ..\obj\main.o: ..\SYSTEM\sys\sys.h
 ..\obj\main.o: ..\USER\stm32f4xx.h
 ..\obj\main.o: ..\CORE\core_cm4.h
-..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\main.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\main.o: ..\CORE\core_cmInstr.h
 ..\obj\main.o: ..\CORE\core_cmFunc.h
 ..\obj\main.o: ..\CORE\core_cm4_simd.h
@@ -39,7 +39,7 @@
 ..\obj\main.o: ..\FWLIB\inc\stm32f4xx_fmc.h
 ..\obj\main.o: ..\FWLIB\inc\stm32f4xx_sai.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
-..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\SYSTEM\delay\delay.h
 ..\obj\main.o: ..\FUNCTION\hardware\rc\rc.h
 ..\obj\main.o: ..\FUNCTION\hardware\can\can.h
@@ -55,14 +55,14 @@
 ..\obj\main.o: ..\APP\CloudMotor.h
 ..\obj\main.o: ..\FUNCTION\DSP\Include\arm_math.h
 ..\obj\main.o: ..\CORE\core_cm4.h
-..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\main.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\string.h
+..\obj\main.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\main.o: ..\FUNCTION\user_lib\user_lib.h
 ..\obj\main.o: ..\FUNCTION\APP\pid\pid.h
 ..\obj\main.o: ..\FUNCTION\APP\shoot\shoot.h
 ..\obj\main.o: ..\APP\CloudMotor.h
+..\obj\main.o: ..\FUNCTION\judge_sys\judgement_info.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\judgeSystem.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\data_fifo.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\protocol.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\communicate.h
-..\obj\main.o: ..\FUNCTION\judge_sys\judgement_info.h

@@ -4,7 +4,7 @@
 ..\obj\remote_control.o: ..\FUNCTION\hardware\rc\rc.h
 ..\obj\remote_control.o: ..\USER\stm32f4xx.h
 ..\obj\remote_control.o: ..\CORE\core_cm4.h
-..\obj\remote_control.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\remote_control.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\remote_control.o: ..\CORE\core_cmInstr.h
 ..\obj\remote_control.o: ..\CORE\core_cmFunc.h
 ..\obj\remote_control.o: ..\CORE\core_cm4_simd.h
@@ -40,5 +40,5 @@
 ..\obj\remote_control.o: ..\FWLIB\inc\stm32f4xx_fmc.h
 ..\obj\remote_control.o: ..\FWLIB\inc\stm32f4xx_sai.h
 ..\obj\remote_control.o: ..\SYSTEM\usart\usart.h
-..\obj\remote_control.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\remote_control.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\remote_control.o: ..\SYSTEM\sys\sys.h

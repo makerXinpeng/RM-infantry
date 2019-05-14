@@ -5,7 +5,7 @@
 ..\obj\chassismotor.o: ..\SYSTEM\sys\sys.h
 ..\obj\chassismotor.o: ..\USER\stm32f4xx.h
 ..\obj\chassismotor.o: ..\CORE\core_cm4.h
-..\obj\chassismotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\chassismotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\chassismotor.o: ..\CORE\core_cmInstr.h
 ..\obj\chassismotor.o: ..\CORE\core_cmFunc.h
 ..\obj\chassismotor.o: ..\CORE\core_cm4_simd.h
@@ -43,8 +43,8 @@
 ..\obj\chassismotor.o: ..\APP\CloudMotor.h
 ..\obj\chassismotor.o: ..\FUNCTION\DSP\Include\arm_math.h
 ..\obj\chassismotor.o: ..\CORE\core_cm4.h
-..\obj\chassismotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\chassismotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\chassismotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\string.h
+..\obj\chassismotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\chassismotor.o: ..\FUNCTION\user_lib\user_lib.h
 ..\obj\chassismotor.o: ..\APP\Encoder.h
 ..\obj\chassismotor.o: ..\FUNCTION\APP\pid\pid.h
@@ -55,4 +55,5 @@
 ..\obj\chassismotor.o: ..\FUNCTION\hardware\laser\laser.h
 ..\obj\chassismotor.o: ..\FUNCTION\hardware\fric\fric.h
 ..\obj\chassismotor.o: ..\SYSTEM\usart\usart.h
-..\obj\chassismotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\chassismotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\chassismotor.o: ..\FUNCTION\judge_sys\judgement_info.h

@@ -3,7 +3,7 @@
 ..\obj\fric.o: ..\USER\main.h
 ..\obj\fric.o: ..\USER\stm32f4xx.h
 ..\obj\fric.o: ..\CORE\core_cm4.h
-..\obj\fric.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\fric.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\fric.o: ..\CORE\core_cmInstr.h
 ..\obj\fric.o: ..\CORE\core_cmFunc.h
 ..\obj\fric.o: ..\CORE\core_cm4_simd.h

@@ -4,7 +4,7 @@
 ..\obj\shoot.o: ..\SYSTEM\sys\sys.h
 ..\obj\shoot.o: ..\USER\stm32f4xx.h
 ..\obj\shoot.o: ..\CORE\core_cm4.h
-..\obj\shoot.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\shoot.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\shoot.o: ..\CORE\core_cmInstr.h
 ..\obj\shoot.o: ..\CORE\core_cmFunc.h
 ..\obj\shoot.o: ..\CORE\core_cm4_simd.h
@@ -44,8 +44,8 @@
 ..\obj\shoot.o: ..\APP\CloudMotor.h
 ..\obj\shoot.o: ..\FUNCTION\DSP\Include\arm_math.h
 ..\obj\shoot.o: ..\CORE\core_cm4.h
-..\obj\shoot.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\shoot.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\shoot.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\string.h
+..\obj\shoot.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\shoot.o: ..\FUNCTION\user_lib\user_lib.h
 ..\obj\shoot.o: ..\FUNCTION\APP\pid\pid.h
 ..\obj\shoot.o: ..\FUNCTION\APP\remote_control\remote_control.h
@@ -54,4 +54,4 @@
 ..\obj\shoot.o: ..\FUNCTION\hardware\laser\laser.h
 ..\obj\shoot.o: ..\FUNCTION\hardware\fric\fric.h
 ..\obj\shoot.o: ..\SYSTEM\usart\usart.h
-..\obj\shoot.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\shoot.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdio.h

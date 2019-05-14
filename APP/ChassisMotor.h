@@ -10,6 +10,9 @@
 #include "Remote_Control.h"
 #include "user_lib.h"
 #include "arm_math.h"
+#include "judgement_info.h"
+
+#define CHASSIS_MAXSPEED 78
 
 //前后的遥控器通道号码
 #define CHASSIS_X_CHANNEL 3

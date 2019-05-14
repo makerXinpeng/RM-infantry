@@ -3,12 +3,12 @@
 ..\obj\cloudmotor.o: ..\USER\main.h
 ..\obj\cloudmotor.o: ..\FUNCTION\DSP\Include\arm_math.h
 ..\obj\cloudmotor.o: ..\CORE\core_cm4.h
-..\obj\cloudmotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\cloudmotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\cloudmotor.o: ..\CORE\core_cmInstr.h
 ..\obj\cloudmotor.o: ..\CORE\core_cmFunc.h
 ..\obj\cloudmotor.o: ..\CORE\core_cm4_simd.h
-..\obj\cloudmotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\cloudmotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\cloudmotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\string.h
+..\obj\cloudmotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\cloudmotor.o: ..\FUNCTION\user_lib\user_lib.h
 ..\obj\cloudmotor.o: ..\FUNCTION\hardware\can\can.h
 ..\obj\cloudmotor.o: ..\SYSTEM\sys\sys.h
@@ -54,4 +54,4 @@
 ..\obj\cloudmotor.o: ..\FUNCTION\hardware\laser\laser.h
 ..\obj\cloudmotor.o: ..\FUNCTION\hardware\fric\fric.h
 ..\obj\cloudmotor.o: ..\SYSTEM\usart\usart.h
-..\obj\cloudmotor.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\cloudmotor.o: G:\RVMDK\ARM\ARMCC\Bin\..\include\stdio.h
