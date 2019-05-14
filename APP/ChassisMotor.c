@@ -93,7 +93,10 @@ void chassis_control_loop(void)
     //电流值赋值
     for (i = 0; i < 4; i++)
     {
+
         chassis_move.motor_chassis[i].give_current = (int16_t)(chassis_move.motor_speed_pid[i].out);
+        if(chassis_move.motor_chassis[i].give_current>MAX_MOTOR_CAN_CURRENT)
+            chassis_move.motor_chassis[i].give_current=MAX_MOTOR_CAN_CURRENT;
     }
     Set_ChassisMotor_Current(chassis_move.motor_chassis[0].give_current,
                              chassis_move.motor_chassis[1].give_current,
@@ -292,8 +295,8 @@ void chassis_rc_to_control_vector(fp32 *vx_set, fp32 *vy_set, chassis_move_t *ch
     rc_deadline_limit(chassis_move_rc_to_vector->chassis_RC->rc.ch[CHASSIS_X_CHANNEL], vx_channel, CHASSIS_RC_DEADLINE);
     rc_deadline_limit(chassis_move_rc_to_vector->chassis_RC->rc.ch[CHASSIS_Y_CHANNEL], vy_channel, CHASSIS_RC_DEADLINE);
 
-    vx_set_channel = vx_channel * -CHASSIS_VX_RC_SEN;
-    vy_set_channel = vy_channel * CHASSIS_VY_RC_SEN;
+    vx_set_channel = vx_channel * CHASSIS_VX_RC_SEN;
+    vy_set_channel = vy_channel * -CHASSIS_VY_RC_SEN;
 
     if (chassis_move_rc_to_vector->chassis_RC->key.v & CHASSIS_FRONT_KEY)
     {

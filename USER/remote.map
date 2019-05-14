@@ -1829,81 +1829,81 @@ Image Symbol Table
     i.__scatterload_null                     0x08002c0c   Section        2  handlers.o(i.__scatterload_null)
     i.__scatterload_zeroinit                 0x08002c0e   Section       14  handlers.o(i.__scatterload_zeroinit)
     i.chassis_control_loop                   0x08002c1c   Section        0  chassismotor.o(i.chassis_control_loop)
-    i.chassis_feedback_update                0x08002ce8   Section        0  chassismotor.o(i.chassis_feedback_update)
-    chassis_feedback_update                  0x08002ce9   Thumb Code   278  chassismotor.o(i.chassis_feedback_update)
-    i.chassis_infantry_follow_gimbal_yaw_control 0x08002e18   Section        0  chassismotor.o(i.chassis_infantry_follow_gimbal_yaw_control)
-    chassis_infantry_follow_gimbal_yaw_control 0x08002e19   Thumb Code   248  chassismotor.o(i.chassis_infantry_follow_gimbal_yaw_control)
-    i.chassis_init                           0x08002f34   Section        0  chassismotor.o(i.chassis_init)
-    i.chassis_rc_to_control_vector           0x08002ffc   Section        0  chassismotor.o(i.chassis_rc_to_control_vector)
-    i.chassis_set_contorl                    0x08003158   Section        0  chassismotor.o(i.chassis_set_contorl)
-    chassis_set_contorl                      0x08003159   Thumb Code   244  chassismotor.o(i.chassis_set_contorl)
-    i.chassis_vector_to_mecanum_wheel_speed  0x08003258   Section        0  chassismotor.o(i.chassis_vector_to_mecanum_wheel_speed)
-    chassis_vector_to_mecanum_wheel_speed    0x08003259   Thumb Code   152  chassismotor.o(i.chassis_vector_to_mecanum_wheel_speed)
-    i.delay_init                             0x080032f8   Section        0  delay.o(i.delay_init)
-    i.delay_us                               0x08003334   Section        0  delay.o(i.delay_us)
-    i.fifo_s_create                          0x08003380   Section        0  data_fifo.o(i.fifo_s_create)
-    i.fifo_s_get                             0x080033b2   Section        0  data_fifo.o(i.fifo_s_get)
-    i.fifo_s_init                            0x080033e8   Section        0  data_fifo.o(i.fifo_s_init)
-    i.fifo_s_put                             0x08003400   Section        0  data_fifo.o(i.fifo_s_put)
-    i.fifo_used_count                        0x08003442   Section        0  data_fifo.o(i.fifo_used_count)
-    i.first_order_filter_cali                0x08003452   Section        0  user_lib.o(i.first_order_filter_cali)
-    i.first_order_filter_init                0x080034a8   Section        0  user_lib.o(i.first_order_filter_init)
-    i.fp32_constrain                         0x080034cc   Section        0  user_lib.o(i.fp32_constrain)
-    i.fric1_on                               0x080034f8   Section        0  fric.o(i.fric1_on)
-    i.fric2_on                               0x0800350c   Section        0  fric.o(i.fric2_on)
-    i.fric_PWM_configuration                 0x08003520   Section        0  fric.o(i.fric_PWM_configuration)
-    i.fric_off                               0x08003664   Section        0  fric.o(i.fric_off)
-    i.getEncoderData                         0x08003680   Section        0  encoder.o(i.getEncoderData)
-    i.get_COUNT_CLOCK                        0x08003744   Section        0  main.o(i.get_COUNT_CLOCK)
-    i.get_crc16_check_sum                    0x08003750   Section        0  protocol.o(i.get_crc16_check_sum)
-    i.get_crc8_check_sum                     0x08003784   Section        0  protocol.o(i.get_crc8_check_sum)
-    i.get_pitch_motor_point                  0x080037a8   Section        0  cloudmotor.o(i.get_pitch_motor_point)
-    i.get_remote_control_point               0x080037b0   Section        0  remote_control.o(i.get_remote_control_point)
-    i.get_yaw_motor_point                    0x080037b8   Section        0  cloudmotor.o(i.get_yaw_motor_point)
-    i.gimbal_behaviour_control_set           0x080037c0   Section        0  cloudmotor.o(i.gimbal_behaviour_control_set)
-    i.gimbal_motor_relative_angle_control    0x080038b4   Section        0  cloudmotor.o(i.gimbal_motor_relative_angle_control)
-    gimbal_motor_relative_angle_control      0x080038b5   Thumb Code    62  cloudmotor.o(i.gimbal_motor_relative_angle_control)
-    i.judgement_data_handler                 0x080038f4   Section        0  judgement_info.o(i.judgement_data_handler)
-    i.laser_configuration                    0x08003a1c   Section        0  laser.o(i.laser_configuration)
-    i.laser_off                              0x08003a58   Section        0  laser.o(i.laser_off)
-    i.laser_on                               0x08003a6c   Section        0  laser.o(i.laser_on)
-    i.loop_fp32_constrain                    0x08003a80   Section        0  user_lib.o(i.loop_fp32_constrain)
-    i.main                                   0x08003ae0   Section        0  main.o(i.main)
-    i.malloc                                 0x08003ae8   Section        0  malloc.o(i.malloc)
-    i.motor_ecd_to_angle_change              0x08003b54   Section        0  cloudmotor.o(i.motor_ecd_to_angle_change)
-    motor_ecd_to_angle_change                0x08003b55   Thumb Code    48  cloudmotor.o(i.motor_ecd_to_angle_change)
-    i.power_ctrl_configuration               0x08003b88   Section        0  power_ctrl.o(i.power_ctrl_configuration)
-    i.power_ctrl_off                         0x08003bd0   Section        0  power_ctrl.o(i.power_ctrl_off)
-    i.power_ctrl_on                          0x08003bf0   Section        0  power_ctrl.o(i.power_ctrl_on)
-    i.ramp_calc                              0x08003c10   Section        0  user_lib.o(i.ramp_calc)
-    i.ramp_init                              0x08003c6c   Section        0  user_lib.o(i.ramp_init)
-    i.remote_control_init                    0x08003c98   Section        0  remote_control.o(i.remote_control_init)
-    i.shoot_bullet_control                   0x08003cac   Section        0  shoot.o(i.shoot_bullet_control)
-    shoot_bullet_control                     0x08003cad   Thumb Code   364  shoot.o(i.shoot_bullet_control)
-    i.shoot_control_loop                     0x08003e38   Section        0  shoot.o(i.shoot_control_loop)
-    i.shoot_done_control                     0x08003fe4   Section        0  shoot.o(i.shoot_done_control)
-    shoot_done_control                       0x08003fe5   Thumb Code    86  shoot.o(i.shoot_done_control)
-    i.shoot_ready_control                    0x08004048   Section        0  shoot.o(i.shoot_ready_control)
-    shoot_ready_control                      0x08004049   Thumb Code   484  shoot.o(i.shoot_ready_control)
-    i.uart_init                              0x08004250   Section        0  usart.o(i.uart_init)
-    i.unpack_fifo_data                       0x08004304   Section        0  communicate.o(i.unpack_fifo_data)
-    i.verify_crc16_check_sum                 0x08004464   Section        0  protocol.o(i.verify_crc16_check_sum)
-    i.verify_crc8_check_sum                  0x080044a4   Section        0  protocol.o(i.verify_crc8_check_sum)
-    .constdata                               0x080044d4   Section       24  shoot.o(.constdata)
-    Trigger_speed_pid                        0x080044d4   Data          12  shoot.o(.constdata)
-    fliter_num                               0x080044e0   Data          12  shoot.o(.constdata)
-    .constdata                               0x080044ec   Section       48  cloudmotor.o(.constdata)
-    YAW_SpeedPID                             0x080044ec   Data          12  cloudmotor.o(.constdata)
-    YAW_PositionPID                          0x080044f8   Data          12  cloudmotor.o(.constdata)
-    PITCH_SpeedPID                           0x08004504   Data          12  cloudmotor.o(.constdata)
-    PITCH_PositionPID                        0x08004510   Data          12  cloudmotor.o(.constdata)
-    .constdata                               0x0800451c   Section       32  chassismotor.o(.constdata)
-    Chassis_speed_PID                        0x0800451c   Data          12  chassismotor.o(.constdata)
-    chassis_yaw_pid                          0x08004528   Data          12  chassismotor.o(.constdata)
-    chassis_x_order_filter                   0x08004534   Data           4  chassismotor.o(.constdata)
-    chassis_y_order_filter                   0x08004538   Data           4  chassismotor.o(.constdata)
-    .constdata                               0x0800453c   Section      770  protocol.o(.constdata)
-    .constdata                               0x08004840   Section     2052  arm_common_tables.o(.constdata)
+    i.chassis_feedback_update                0x08002d04   Section        0  chassismotor.o(i.chassis_feedback_update)
+    chassis_feedback_update                  0x08002d05   Thumb Code   278  chassismotor.o(i.chassis_feedback_update)
+    i.chassis_infantry_follow_gimbal_yaw_control 0x08002e34   Section        0  chassismotor.o(i.chassis_infantry_follow_gimbal_yaw_control)
+    chassis_infantry_follow_gimbal_yaw_control 0x08002e35   Thumb Code   248  chassismotor.o(i.chassis_infantry_follow_gimbal_yaw_control)
+    i.chassis_init                           0x08002f50   Section        0  chassismotor.o(i.chassis_init)
+    i.chassis_rc_to_control_vector           0x08003018   Section        0  chassismotor.o(i.chassis_rc_to_control_vector)
+    i.chassis_set_contorl                    0x08003174   Section        0  chassismotor.o(i.chassis_set_contorl)
+    chassis_set_contorl                      0x08003175   Thumb Code   244  chassismotor.o(i.chassis_set_contorl)
+    i.chassis_vector_to_mecanum_wheel_speed  0x08003274   Section        0  chassismotor.o(i.chassis_vector_to_mecanum_wheel_speed)
+    chassis_vector_to_mecanum_wheel_speed    0x08003275   Thumb Code   152  chassismotor.o(i.chassis_vector_to_mecanum_wheel_speed)
+    i.delay_init                             0x08003314   Section        0  delay.o(i.delay_init)
+    i.delay_us                               0x08003350   Section        0  delay.o(i.delay_us)
+    i.fifo_s_create                          0x0800339c   Section        0  data_fifo.o(i.fifo_s_create)
+    i.fifo_s_get                             0x080033ce   Section        0  data_fifo.o(i.fifo_s_get)
+    i.fifo_s_init                            0x08003404   Section        0  data_fifo.o(i.fifo_s_init)
+    i.fifo_s_put                             0x0800341c   Section        0  data_fifo.o(i.fifo_s_put)
+    i.fifo_used_count                        0x0800345e   Section        0  data_fifo.o(i.fifo_used_count)
+    i.first_order_filter_cali                0x0800346e   Section        0  user_lib.o(i.first_order_filter_cali)
+    i.first_order_filter_init                0x080034c4   Section        0  user_lib.o(i.first_order_filter_init)
+    i.fp32_constrain                         0x080034e8   Section        0  user_lib.o(i.fp32_constrain)
+    i.fric1_on                               0x08003514   Section        0  fric.o(i.fric1_on)
+    i.fric2_on                               0x08003528   Section        0  fric.o(i.fric2_on)
+    i.fric_PWM_configuration                 0x0800353c   Section        0  fric.o(i.fric_PWM_configuration)
+    i.fric_off                               0x08003680   Section        0  fric.o(i.fric_off)
+    i.getEncoderData                         0x0800369c   Section        0  encoder.o(i.getEncoderData)
+    i.get_COUNT_CLOCK                        0x08003760   Section        0  main.o(i.get_COUNT_CLOCK)
+    i.get_crc16_check_sum                    0x0800376c   Section        0  protocol.o(i.get_crc16_check_sum)
+    i.get_crc8_check_sum                     0x080037a0   Section        0  protocol.o(i.get_crc8_check_sum)
+    i.get_pitch_motor_point                  0x080037c4   Section        0  cloudmotor.o(i.get_pitch_motor_point)
+    i.get_remote_control_point               0x080037cc   Section        0  remote_control.o(i.get_remote_control_point)
+    i.get_yaw_motor_point                    0x080037d4   Section        0  cloudmotor.o(i.get_yaw_motor_point)
+    i.gimbal_behaviour_control_set           0x080037dc   Section        0  cloudmotor.o(i.gimbal_behaviour_control_set)
+    i.gimbal_motor_relative_angle_control    0x080038d0   Section        0  cloudmotor.o(i.gimbal_motor_relative_angle_control)
+    gimbal_motor_relative_angle_control      0x080038d1   Thumb Code    62  cloudmotor.o(i.gimbal_motor_relative_angle_control)
+    i.judgement_data_handler                 0x08003910   Section        0  judgement_info.o(i.judgement_data_handler)
+    i.laser_configuration                    0x08003a38   Section        0  laser.o(i.laser_configuration)
+    i.laser_off                              0x08003a74   Section        0  laser.o(i.laser_off)
+    i.laser_on                               0x08003a88   Section        0  laser.o(i.laser_on)
+    i.loop_fp32_constrain                    0x08003a9c   Section        0  user_lib.o(i.loop_fp32_constrain)
+    i.main                                   0x08003afc   Section        0  main.o(i.main)
+    i.malloc                                 0x08003b04   Section        0  malloc.o(i.malloc)
+    i.motor_ecd_to_angle_change              0x08003b70   Section        0  cloudmotor.o(i.motor_ecd_to_angle_change)
+    motor_ecd_to_angle_change                0x08003b71   Thumb Code    48  cloudmotor.o(i.motor_ecd_to_angle_change)
+    i.power_ctrl_configuration               0x08003ba4   Section        0  power_ctrl.o(i.power_ctrl_configuration)
+    i.power_ctrl_off                         0x08003bec   Section        0  power_ctrl.o(i.power_ctrl_off)
+    i.power_ctrl_on                          0x08003c0c   Section        0  power_ctrl.o(i.power_ctrl_on)
+    i.ramp_calc                              0x08003c2c   Section        0  user_lib.o(i.ramp_calc)
+    i.ramp_init                              0x08003c88   Section        0  user_lib.o(i.ramp_init)
+    i.remote_control_init                    0x08003cb4   Section        0  remote_control.o(i.remote_control_init)
+    i.shoot_bullet_control                   0x08003cc8   Section        0  shoot.o(i.shoot_bullet_control)
+    shoot_bullet_control                     0x08003cc9   Thumb Code   364  shoot.o(i.shoot_bullet_control)
+    i.shoot_control_loop                     0x08003e54   Section        0  shoot.o(i.shoot_control_loop)
+    i.shoot_done_control                     0x08004000   Section        0  shoot.o(i.shoot_done_control)
+    shoot_done_control                       0x08004001   Thumb Code    86  shoot.o(i.shoot_done_control)
+    i.shoot_ready_control                    0x08004064   Section        0  shoot.o(i.shoot_ready_control)
+    shoot_ready_control                      0x08004065   Thumb Code   484  shoot.o(i.shoot_ready_control)
+    i.uart_init                              0x0800426c   Section        0  usart.o(i.uart_init)
+    i.unpack_fifo_data                       0x08004320   Section        0  communicate.o(i.unpack_fifo_data)
+    i.verify_crc16_check_sum                 0x08004480   Section        0  protocol.o(i.verify_crc16_check_sum)
+    i.verify_crc8_check_sum                  0x080044c0   Section        0  protocol.o(i.verify_crc8_check_sum)
+    .constdata                               0x080044f0   Section       24  shoot.o(.constdata)
+    Trigger_speed_pid                        0x080044f0   Data          12  shoot.o(.constdata)
+    fliter_num                               0x080044fc   Data          12  shoot.o(.constdata)
+    .constdata                               0x08004508   Section       48  cloudmotor.o(.constdata)
+    YAW_SpeedPID                             0x08004508   Data          12  cloudmotor.o(.constdata)
+    YAW_PositionPID                          0x08004514   Data          12  cloudmotor.o(.constdata)
+    PITCH_SpeedPID                           0x08004520   Data          12  cloudmotor.o(.constdata)
+    PITCH_PositionPID                        0x0800452c   Data          12  cloudmotor.o(.constdata)
+    .constdata                               0x08004538   Section       32  chassismotor.o(.constdata)
+    Chassis_speed_PID                        0x08004538   Data          12  chassismotor.o(.constdata)
+    chassis_yaw_pid                          0x08004544   Data          12  chassismotor.o(.constdata)
+    chassis_x_order_filter                   0x08004550   Data           4  chassismotor.o(.constdata)
+    chassis_y_order_filter                   0x08004554   Data           4  chassismotor.o(.constdata)
+    .constdata                               0x08004558   Section      770  protocol.o(.constdata)
+    .constdata                               0x0800485c   Section     2052  arm_common_tables.o(.constdata)
     .data                                    0x20000000   Section        4  main.o(.data)
     .data                                    0x20000004   Section       16  stm32f4xx_rcc.o(.data)
     APBAHBPrescTable                         0x20000004   Data          16  stm32f4xx_rcc.o(.data)
@@ -2171,55 +2171,55 @@ Image Symbol Table
     __scatterload_copy                       0x08002bff   Thumb Code    14  handlers.o(i.__scatterload_copy)
     __scatterload_null                       0x08002c0d   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x08002c0f   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    chassis_control_loop                     0x08002c1d   Thumb Code   198  chassismotor.o(i.chassis_control_loop)
-    chassis_init                             0x08002f35   Thumb Code   150  chassismotor.o(i.chassis_init)
-    chassis_rc_to_control_vector             0x08002ffd   Thumb Code   320  chassismotor.o(i.chassis_rc_to_control_vector)
-    delay_init                               0x080032f9   Thumb Code    52  delay.o(i.delay_init)
-    delay_us                                 0x08003335   Thumb Code    72  delay.o(i.delay_us)
-    fifo_s_create                            0x08003381   Thumb Code    50  data_fifo.o(i.fifo_s_create)
-    fifo_s_get                               0x080033b3   Thumb Code    54  data_fifo.o(i.fifo_s_get)
-    fifo_s_init                              0x080033e9   Thumb Code    24  data_fifo.o(i.fifo_s_init)
-    fifo_s_put                               0x08003401   Thumb Code    66  data_fifo.o(i.fifo_s_put)
-    fifo_used_count                          0x08003443   Thumb Code    16  data_fifo.o(i.fifo_used_count)
-    first_order_filter_cali                  0x08003453   Thumb Code    84  user_lib.o(i.first_order_filter_cali)
-    first_order_filter_init                  0x080034a9   Thumb Code    32  user_lib.o(i.first_order_filter_init)
-    fp32_constrain                           0x080034cd   Thumb Code    42  user_lib.o(i.fp32_constrain)
-    fric1_on                                 0x080034f9   Thumb Code    14  fric.o(i.fric1_on)
-    fric2_on                                 0x0800350d   Thumb Code    14  fric.o(i.fric2_on)
-    fric_PWM_configuration                   0x08003521   Thumb Code   306  fric.o(i.fric_PWM_configuration)
-    fric_off                                 0x08003665   Thumb Code    24  fric.o(i.fric_off)
-    getEncoderData                           0x08003681   Thumb Code   184  encoder.o(i.getEncoderData)
-    get_COUNT_CLOCK                          0x08003745   Thumb Code     6  main.o(i.get_COUNT_CLOCK)
-    get_crc16_check_sum                      0x08003751   Thumb Code    46  protocol.o(i.get_crc16_check_sum)
-    get_crc8_check_sum                       0x08003785   Thumb Code    32  protocol.o(i.get_crc8_check_sum)
-    get_pitch_motor_point                    0x080037a9   Thumb Code     4  cloudmotor.o(i.get_pitch_motor_point)
-    get_remote_control_point                 0x080037b1   Thumb Code     4  remote_control.o(i.get_remote_control_point)
-    get_yaw_motor_point                      0x080037b9   Thumb Code     4  cloudmotor.o(i.get_yaw_motor_point)
-    gimbal_behaviour_control_set             0x080037c1   Thumb Code   210  cloudmotor.o(i.gimbal_behaviour_control_set)
-    judgement_data_handler                   0x080038f5   Thumb Code   290  judgement_info.o(i.judgement_data_handler)
-    laser_configuration                      0x08003a1d   Thumb Code    54  laser.o(i.laser_configuration)
-    laser_off                                0x08003a59   Thumb Code    14  laser.o(i.laser_off)
-    laser_on                                 0x08003a6d   Thumb Code    14  laser.o(i.laser_on)
-    loop_fp32_constrain                      0x08003a81   Thumb Code    96  user_lib.o(i.loop_fp32_constrain)
-    main                                     0x08003ae1   Thumb Code     8  main.o(i.main)
-    malloc                                   0x08003ae9   Thumb Code    92  malloc.o(i.malloc)
-    power_ctrl_configuration                 0x08003b89   Thumb Code    66  power_ctrl.o(i.power_ctrl_configuration)
-    power_ctrl_off                           0x08003bd1   Thumb Code    26  power_ctrl.o(i.power_ctrl_off)
-    power_ctrl_on                            0x08003bf1   Thumb Code    26  power_ctrl.o(i.power_ctrl_on)
-    ramp_calc                                0x08003c11   Thumb Code    90  user_lib.o(i.ramp_calc)
-    ramp_init                                0x08003c6d   Thumb Code    40  user_lib.o(i.ramp_init)
-    remote_control_init                      0x08003c99   Thumb Code    16  remote_control.o(i.remote_control_init)
-    shoot_control_loop                       0x08003e39   Thumb Code   372  shoot.o(i.shoot_control_loop)
-    uart_init                                0x08004251   Thumb Code   172  usart.o(i.uart_init)
-    unpack_fifo_data                         0x08004305   Thumb Code   348  communicate.o(i.unpack_fifo_data)
-    verify_crc16_check_sum                   0x08004465   Thumb Code    60  protocol.o(i.verify_crc16_check_sum)
-    verify_crc8_check_sum                    0x080044a5   Thumb Code    48  protocol.o(i.verify_crc8_check_sum)
-    CRC8_INIT                                0x0800453c   Data           1  protocol.o(.constdata)
-    CRC8_TAB                                 0x0800453d   Data         256  protocol.o(.constdata)
-    wCRC_Table                               0x0800463e   Data         512  protocol.o(.constdata)
-    sinTable_f32                             0x08004840   Data        2052  arm_common_tables.o(.constdata)
-    Region$$Table$$Base                      0x08005044   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08005064   Number         0  anon$$obj.o(Region$$Table)
+    chassis_control_loop                     0x08002c1d   Thumb Code   228  chassismotor.o(i.chassis_control_loop)
+    chassis_init                             0x08002f51   Thumb Code   150  chassismotor.o(i.chassis_init)
+    chassis_rc_to_control_vector             0x08003019   Thumb Code   320  chassismotor.o(i.chassis_rc_to_control_vector)
+    delay_init                               0x08003315   Thumb Code    52  delay.o(i.delay_init)
+    delay_us                                 0x08003351   Thumb Code    72  delay.o(i.delay_us)
+    fifo_s_create                            0x0800339d   Thumb Code    50  data_fifo.o(i.fifo_s_create)
+    fifo_s_get                               0x080033cf   Thumb Code    54  data_fifo.o(i.fifo_s_get)
+    fifo_s_init                              0x08003405   Thumb Code    24  data_fifo.o(i.fifo_s_init)
+    fifo_s_put                               0x0800341d   Thumb Code    66  data_fifo.o(i.fifo_s_put)
+    fifo_used_count                          0x0800345f   Thumb Code    16  data_fifo.o(i.fifo_used_count)
+    first_order_filter_cali                  0x0800346f   Thumb Code    84  user_lib.o(i.first_order_filter_cali)
+    first_order_filter_init                  0x080034c5   Thumb Code    32  user_lib.o(i.first_order_filter_init)
+    fp32_constrain                           0x080034e9   Thumb Code    42  user_lib.o(i.fp32_constrain)
+    fric1_on                                 0x08003515   Thumb Code    14  fric.o(i.fric1_on)
+    fric2_on                                 0x08003529   Thumb Code    14  fric.o(i.fric2_on)
+    fric_PWM_configuration                   0x0800353d   Thumb Code   306  fric.o(i.fric_PWM_configuration)
+    fric_off                                 0x08003681   Thumb Code    24  fric.o(i.fric_off)
+    getEncoderData                           0x0800369d   Thumb Code   184  encoder.o(i.getEncoderData)
+    get_COUNT_CLOCK                          0x08003761   Thumb Code     6  main.o(i.get_COUNT_CLOCK)
+    get_crc16_check_sum                      0x0800376d   Thumb Code    46  protocol.o(i.get_crc16_check_sum)
+    get_crc8_check_sum                       0x080037a1   Thumb Code    32  protocol.o(i.get_crc8_check_sum)
+    get_pitch_motor_point                    0x080037c5   Thumb Code     4  cloudmotor.o(i.get_pitch_motor_point)
+    get_remote_control_point                 0x080037cd   Thumb Code     4  remote_control.o(i.get_remote_control_point)
+    get_yaw_motor_point                      0x080037d5   Thumb Code     4  cloudmotor.o(i.get_yaw_motor_point)
+    gimbal_behaviour_control_set             0x080037dd   Thumb Code   210  cloudmotor.o(i.gimbal_behaviour_control_set)
+    judgement_data_handler                   0x08003911   Thumb Code   290  judgement_info.o(i.judgement_data_handler)
+    laser_configuration                      0x08003a39   Thumb Code    54  laser.o(i.laser_configuration)
+    laser_off                                0x08003a75   Thumb Code    14  laser.o(i.laser_off)
+    laser_on                                 0x08003a89   Thumb Code    14  laser.o(i.laser_on)
+    loop_fp32_constrain                      0x08003a9d   Thumb Code    96  user_lib.o(i.loop_fp32_constrain)
+    main                                     0x08003afd   Thumb Code     8  main.o(i.main)
+    malloc                                   0x08003b05   Thumb Code    92  malloc.o(i.malloc)
+    power_ctrl_configuration                 0x08003ba5   Thumb Code    66  power_ctrl.o(i.power_ctrl_configuration)
+    power_ctrl_off                           0x08003bed   Thumb Code    26  power_ctrl.o(i.power_ctrl_off)
+    power_ctrl_on                            0x08003c0d   Thumb Code    26  power_ctrl.o(i.power_ctrl_on)
+    ramp_calc                                0x08003c2d   Thumb Code    90  user_lib.o(i.ramp_calc)
+    ramp_init                                0x08003c89   Thumb Code    40  user_lib.o(i.ramp_init)
+    remote_control_init                      0x08003cb5   Thumb Code    16  remote_control.o(i.remote_control_init)
+    shoot_control_loop                       0x08003e55   Thumb Code   372  shoot.o(i.shoot_control_loop)
+    uart_init                                0x0800426d   Thumb Code   172  usart.o(i.uart_init)
+    unpack_fifo_data                         0x08004321   Thumb Code   348  communicate.o(i.unpack_fifo_data)
+    verify_crc16_check_sum                   0x08004481   Thumb Code    60  protocol.o(i.verify_crc16_check_sum)
+    verify_crc8_check_sum                    0x080044c1   Thumb Code    48  protocol.o(i.verify_crc8_check_sum)
+    CRC8_INIT                                0x08004558   Data           1  protocol.o(.constdata)
+    CRC8_TAB                                 0x08004559   Data         256  protocol.o(.constdata)
+    wCRC_Table                               0x0800465a   Data         512  protocol.o(.constdata)
+    sinTable_f32                             0x0800485c   Data        2052  arm_common_tables.o(.constdata)
+    Region$$Table$$Base                      0x08005060   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08005080   Number         0  anon$$obj.o(Region$$Table)
     COUNT_CLOCK                              0x20000000   Data           4  main.o(.data)
     USART_RX_STA                             0x20000018   Data           2  usart.o(.data)
     CloudOut                                 0x20000040   Data           4  cloudmotor.o(.data)
@@ -2252,32 +2252,32 @@ Memory Map of the image
 
   Image Entry point : 0x080001ad
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000050e4, Max: 0x00200000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00005100, Max: 0x00200000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00005064, Max: 0x00200000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00005080, Max: 0x00200000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000001ac   Data   RO          466    RESET               startup_stm32f427x.o
-    0x080001ac   0x080001ac   0x00000000   Code   RO         6900  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001ac   0x080001ac   0x00000004   Code   RO         6943    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080001b0   0x080001b0   0x00000004   Code   RO         6946    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO         6948    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO         6950    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001b4   0x080001b4   0x00000008   Code   RO         6951    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001bc   0x080001bc   0x00000000   Code   RO         6953    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080001bc   0x080001bc   0x00000000   Code   RO         6955    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080001bc   0x080001bc   0x00000004   Code   RO         6944    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001ac   0x080001ac   0x00000000   Code   RO         7048  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001ac   0x080001ac   0x00000004   Code   RO         7091    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001b0   0x080001b0   0x00000004   Code   RO         7094    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO         7096    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO         7098    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001b4   0x080001b4   0x00000008   Code   RO         7099    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001bc   0x080001bc   0x00000000   Code   RO         7101    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080001bc   0x080001bc   0x00000000   Code   RO         7103    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080001bc   0x080001bc   0x00000004   Code   RO         7092    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001c0   0x080001c0   0x00000024   Code   RO          467    .text               startup_stm32f427x.o
-    0x080001e4   0x080001e4   0x00000078   Code   RO         6738    .text               arm_cortexM4lf_math.lib(arm_cos_f32.o)
-    0x0800025c   0x0800025c   0x00000074   Code   RO         6791    .text               arm_cortexM4lf_math.lib(arm_sin_f32.o)
-    0x080002d0   0x080002d0   0x00000024   Code   RO         6903    .text               mc_w.l(memcpya.o)
-    0x080002f4   0x080002f4   0x00000026   Code   RO         6937    .text               mf_w.l(f2d.o)
+    0x080001e4   0x080001e4   0x00000078   Code   RO         6886    .text               arm_cortexM4lf_math.lib(arm_cos_f32.o)
+    0x0800025c   0x0800025c   0x00000074   Code   RO         6939    .text               arm_cortexM4lf_math.lib(arm_sin_f32.o)
+    0x080002d0   0x080002d0   0x00000024   Code   RO         7051    .text               mc_w.l(memcpya.o)
+    0x080002f4   0x080002f4   0x00000026   Code   RO         7085    .text               mf_w.l(f2d.o)
     0x0800031a   0x0800031a   0x00000002   PAD
-    0x0800031c   0x0800031c   0x00000030   Code   RO         6939    .text               mf_w.l(cdcmple.o)
-    0x0800034c   0x0800034c   0x00000030   Code   RO         6941    .text               mf_w.l(cdrcmple.o)
-    0x0800037c   0x0800037c   0x00000000   Code   RO         6959    .text               mc_w.l(iusefp.o)
-    0x0800037c   0x0800037c   0x00000024   Code   RO         6960    .text               mc_w.l(init.o)
+    0x0800031c   0x0800031c   0x00000030   Code   RO         7087    .text               mf_w.l(cdcmple.o)
+    0x0800034c   0x0800034c   0x00000030   Code   RO         7089    .text               mf_w.l(cdrcmple.o)
+    0x0800037c   0x0800037c   0x00000000   Code   RO         7107    .text               mc_w.l(iusefp.o)
+    0x0800037c   0x0800037c   0x00000024   Code   RO         7108    .text               mc_w.l(init.o)
     0x080003a0   0x080003a0   0x00000060   Code   RO            3    i.BSP_init          main.o
     0x08000400   0x08000400   0x00000004   Code   RO          248    i.BusFault_Handler  stm32f4xx_it.o
     0x08000404   0x08000404   0x0000003c   Code   RO         5637    i.CAN1_RX0_IRQHandler  can.o
@@ -2294,12 +2294,12 @@ Memory Map of the image
     0x08000a2e   0x08000a2e   0x000000f0   Code   RO          801    i.CAN_Receive       stm32f4xx_can.o
     0x08000b1e   0x08000b1e   0x00000020   Code   RO          804    i.CAN_StructInit    stm32f4xx_can.o
     0x08000b3e   0x08000b3e   0x00000126   Code   RO          806    i.CAN_Transmit      stm32f4xx_can.o
-    0x08000c64   0x08000c64   0x00000088   Code   RO         6212    i.CanReceiveMsgProcess  encoder.o
+    0x08000c64   0x08000c64   0x00000088   Code   RO         6260    i.CanReceiveMsgProcess  encoder.o
     0x08000cec   0x08000cec   0x00000012   Code   RO          809    i.CheckITStatus     stm32f4xx_can.o
     0x08000cfe   0x08000cfe   0x00000002   PAD
-    0x08000d00   0x08000d00   0x000000f4   Code   RO         6320    i.CloudMotor_Config  cloudmotor.o
-    0x08000df4   0x08000df4   0x00000078   Code   RO         6321    i.CloudMotor_Ctrl   cloudmotor.o
-    0x08000e6c   0x08000e6c   0x000000b4   Code   RO         6263    i.Control_Task      control_task.o
+    0x08000d00   0x08000d00   0x000000f4   Code   RO         6445    i.CloudMotor_Config  cloudmotor.o
+    0x08000df4   0x08000df4   0x00000078   Code   RO         6446    i.CloudMotor_Ctrl   cloudmotor.o
+    0x08000e6c   0x08000e6c   0x000000b4   Code   RO         6311    i.Control_Task      control_task.o
     0x08000f20   0x08000f20   0x00000034   Code   RO         1486    i.DMA_ClearFlag     stm32f4xx_dma.o
     0x08000f54   0x08000f54   0x00000016   Code   RO         1488    i.DMA_Cmd           stm32f4xx_dma.o
     0x08000f6a   0x08000f6a   0x00000002   PAD
@@ -2313,26 +2313,26 @@ Memory Map of the image
     0x08001168   0x08001168   0x00000004   Code   RO         1503    i.DMA_SetCurrDataCounter  stm32f4xx_dma.o
     0x0800116c   0x0800116c   0x00000002   Code   RO          249    i.DebugMon_Handler  stm32f4xx_it.o
     0x0800116e   0x0800116e   0x00000002   PAD
-    0x08001170   0x08001170   0x00000010   Code   RO         6213    i.Encoder_Start     encoder.o
-    0x08001180   0x08001180   0x00000074   Code   RO         6322    i.GIMBAL_Feedback_Update  cloudmotor.o
-    0x080011f4   0x080011f4   0x00000284   Code   RO         6323    i.GIMBAL_PID_Calc   cloudmotor.o
-    0x08001478   0x08001478   0x00000044   Code   RO         6324    i.GIMBAL_Set_Contorl  cloudmotor.o
-    0x080014bc   0x080014bc   0x0000009c   Code   RO         6325    i.GIMBAL_relative_angle_limit  cloudmotor.o
+    0x08001170   0x08001170   0x00000010   Code   RO         6261    i.Encoder_Start     encoder.o
+    0x08001180   0x08001180   0x00000074   Code   RO         6447    i.GIMBAL_Feedback_Update  cloudmotor.o
+    0x080011f4   0x080011f4   0x00000284   Code   RO         6448    i.GIMBAL_PID_Calc   cloudmotor.o
+    0x08001478   0x08001478   0x00000044   Code   RO         6449    i.GIMBAL_Set_Contorl  cloudmotor.o
+    0x080014bc   0x080014bc   0x0000009c   Code   RO         6450    i.GIMBAL_relative_angle_limit  cloudmotor.o
     0x08001558   0x08001558   0x00000090   Code   RO         2267    i.GPIO_Init         stm32f4xx_gpio.o
     0x080015e8   0x080015e8   0x00000046   Code   RO         2268    i.GPIO_PinAFConfig  stm32f4xx_gpio.o
     0x0800162e   0x0800162e   0x00000012   Code   RO         2271    i.GPIO_ReadInputDataBit  stm32f4xx_gpio.o
     0x08001640   0x08001640   0x00000004   Code   RO         2274    i.GPIO_ResetBits    stm32f4xx_gpio.o
     0x08001644   0x08001644   0x00000004   Code   RO         2275    i.GPIO_SetBits      stm32f4xx_gpio.o
     0x08001648   0x08001648   0x00000004   Code   RO          250    i.HardFault_Handler  stm32f4xx_it.o
-    0x0800164c   0x0800164c   0x00000008   Code   RO         6644    i.JudgeSystem_init  judgesystem.o
-    0x08001654   0x08001654   0x00000144   Code   RO         6645    i.JudgeSystem_uart7_init  judgesystem.o
+    0x0800164c   0x0800164c   0x00000008   Code   RO         6792    i.JudgeSystem_init  judgesystem.o
+    0x08001654   0x08001654   0x00000144   Code   RO         6793    i.JudgeSystem_uart7_init  judgesystem.o
     0x08001798   0x08001798   0x00000004   Code   RO          251    i.MemManage_Handler  stm32f4xx_it.o
     0x0800179c   0x0800179c   0x00000002   Code   RO          252    i.NMI_Handler       stm32f4xx_it.o
     0x0800179e   0x0800179e   0x00000002   PAD
     0x080017a0   0x080017a0   0x00000078   Code   RO          473    i.NVIC_Init         misc.o
     0x08001818   0x08001818   0x00000014   Code   RO          474    i.NVIC_PriorityGroupConfig  misc.o
-    0x0800182c   0x0800182c   0x000001f0   Code   RO         6020    i.PID_Calc          pid.o
-    0x08001a1c   0x08001a1c   0x00000060   Code   RO         6021    i.PID_Init          pid.o
+    0x0800182c   0x0800182c   0x000001f0   Code   RO         6056    i.PID_Calc          pid.o
+    0x08001a1c   0x08001a1c   0x00000060   Code   RO         6057    i.PID_Init          pid.o
     0x08001a7c   0x08001a7c   0x00000002   Code   RO          253    i.PendSV_Handler    stm32f4xx_it.o
     0x08001a7e   0x08001a7e   0x00000002   PAD
     0x08001a80   0x08001a80   0x00000020   Code   RO         3131    i.RCC_AHB1PeriphClockCmd  stm32f4xx_rcc.o
@@ -2342,13 +2342,13 @@ Memory Map of the image
     0x08001b00   0x08001b00   0x00000020   Code   RO         3145    i.RCC_APB2PeriphResetCmd  stm32f4xx_rcc.o
     0x08001b20   0x08001b20   0x000000e8   Code   RO         3152    i.RCC_GetClocksFreq  stm32f4xx_rcc.o
     0x08001c08   0x08001c08   0x0000014c   Code   RO         5496    i.RC_Init           rc.o
-    0x08001d54   0x08001d54   0x000000da   Code   RO         5954    i.SBUS_TO_RC        remote_control.o
+    0x08001d54   0x08001d54   0x000000da   Code   RO         5990    i.SBUS_TO_RC        remote_control.o
     0x08001e2e   0x08001e2e   0x00000002   Code   RO          254    i.SVC_Handler       stm32f4xx_it.o
     0x08001e30   0x08001e30   0x00000120   Code   RO          429    i.SetSysClock       system_stm32f4xx.o
     0x08001f50   0x08001f50   0x00000064   Code   RO         5641    i.Set_ChassisMotor_Current  can.o
     0x08001fb4   0x08001fb4   0x00000058   Code   RO         5642    i.Set_CloudMotor_Current  can.o
-    0x0800200c   0x0800200c   0x000001ac   Code   RO         6049    i.Shoot_Feedback_Update  shoot.o
-    0x080021b8   0x080021b8   0x00000134   Code   RO         6050    i.Shoot_Set_Mode    shoot.o
+    0x0800200c   0x0800200c   0x000001ac   Code   RO         6085    i.Shoot_Feedback_Update  shoot.o
+    0x080021b8   0x080021b8   0x00000134   Code   RO         6086    i.Shoot_Set_Mode    shoot.o
     0x080022ec   0x080022ec   0x00000028   Code   RO          477    i.SysTick_CLKSourceConfig  misc.o
     0x08002314   0x08002314   0x00000002   Code   RO          255    i.SysTick_Handler   stm32f4xx_it.o
     0x08002316   0x08002316   0x00000002   PAD
@@ -2372,9 +2372,9 @@ Memory Map of the image
     0x080025ea   0x080025ea   0x00000004   Code   RO         4540    i.TIM_SetCompare4   stm32f4xx_tim.o
     0x080025ee   0x080025ee   0x00000002   PAD
     0x080025f0   0x080025f0   0x00000084   Code   RO         4547    i.TIM_TimeBaseInit  stm32f4xx_tim.o
-    0x08002674   0x08002674   0x000000cc   Code   RO         6051    i.TriggerMotor_PID_Config  shoot.o
-    0x08002740   0x08002740   0x00000090   Code   RO         6646    i.UART7_IRQHandler  judgesystem.o
-    0x080027d0   0x080027d0   0x000000e4   Code   RO         5955    i.USART1_IRQHandler  remote_control.o
+    0x08002674   0x08002674   0x000000cc   Code   RO         6087    i.TriggerMotor_PID_Config  shoot.o
+    0x08002740   0x08002740   0x00000090   Code   RO         6794    i.UART7_IRQHandler  judgesystem.o
+    0x080027d0   0x080027d0   0x000000e4   Code   RO         5991    i.USART1_IRQHandler  remote_control.o
     0x080028b4   0x080028b4   0x00000088   Code   RO         5339    i.USART6_IRQHandler  usart.o
     0x0800293c   0x0800293c   0x00000012   Code   RO         5021    i.USART_ClearFlag   stm32f4xx_usart.o
     0x0800294e   0x0800294e   0x00000018   Code   RO         5025    i.USART_Cmd         stm32f4xx_usart.o
@@ -2386,104 +2386,104 @@ Memory Map of the image
     0x08002b08   0x08002b08   0x000000d4   Code   RO         5032    i.USART_Init        stm32f4xx_usart.o
     0x08002bdc   0x08002bdc   0x0000000a   Code   RO         5039    i.USART_ReceiveData  stm32f4xx_usart.o
     0x08002be6   0x08002be6   0x00000004   Code   RO          256    i.UsageFault_Handler  stm32f4xx_it.o
-    0x08002bea   0x08002bea   0x00000014   Code   RO         6894    i.__hardfp_fabs     m_wm.l(fabs.o)
-    0x08002bfe   0x08002bfe   0x0000000e   Code   RO         6964    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002c0c   0x08002c0c   0x00000002   Code   RO         6965    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002c0e   0x08002c0e   0x0000000e   Code   RO         6966    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08002c1c   0x08002c1c   0x000000cc   Code   RO         6406    i.chassis_control_loop  chassismotor.o
-    0x08002ce8   0x08002ce8   0x00000130   Code   RO         6407    i.chassis_feedback_update  chassismotor.o
-    0x08002e18   0x08002e18   0x0000011c   Code   RO         6408    i.chassis_infantry_follow_gimbal_yaw_control  chassismotor.o
-    0x08002f34   0x08002f34   0x000000c8   Code   RO         6409    i.chassis_init      chassismotor.o
-    0x08002ffc   0x08002ffc   0x0000015c   Code   RO         6410    i.chassis_rc_to_control_vector  chassismotor.o
-    0x08003158   0x08003158   0x00000100   Code   RO         6411    i.chassis_set_contorl  chassismotor.o
-    0x08003258   0x08003258   0x000000a0   Code   RO         6412    i.chassis_vector_to_mecanum_wheel_speed  chassismotor.o
-    0x080032f8   0x080032f8   0x0000003c   Code   RO         5271    i.delay_init        delay.o
-    0x08003334   0x08003334   0x0000004c   Code   RO         5273    i.delay_us          delay.o
-    0x08003380   0x08003380   0x00000032   Code   RO         6522    i.fifo_s_create     data_fifo.o
-    0x080033b2   0x080033b2   0x00000036   Code   RO         6524    i.fifo_s_get        data_fifo.o
-    0x080033e8   0x080033e8   0x00000018   Code   RO         6526    i.fifo_s_init       data_fifo.o
-    0x08003400   0x08003400   0x00000042   Code   RO         6528    i.fifo_s_put        data_fifo.o
-    0x08003442   0x08003442   0x00000010   Code   RO         6530    i.fifo_used_count   data_fifo.o
-    0x08003452   0x08003452   0x00000054   Code   RO         5384    i.first_order_filter_cali  user_lib.o
-    0x080034a6   0x080034a6   0x00000002   PAD
-    0x080034a8   0x080034a8   0x00000024   Code   RO         5385    i.first_order_filter_init  user_lib.o
-    0x080034cc   0x080034cc   0x0000002a   Code   RO         5386    i.fp32_constrain    user_lib.o
-    0x080034f6   0x080034f6   0x00000002   PAD
-    0x080034f8   0x080034f8   0x00000014   Code   RO         5779    i.fric1_on          fric.o
-    0x0800350c   0x0800350c   0x00000014   Code   RO         5780    i.fric2_on          fric.o
-    0x08003520   0x08003520   0x00000144   Code   RO         5781    i.fric_PWM_configuration  fric.o
-    0x08003664   0x08003664   0x0000001c   Code   RO         5782    i.fric_off          fric.o
-    0x08003680   0x08003680   0x000000c4   Code   RO         6216    i.getEncoderData    encoder.o
-    0x08003744   0x08003744   0x0000000c   Code   RO            5    i.get_COUNT_CLOCK   main.o
-    0x08003750   0x08003750   0x00000034   Code   RO         6685    i.get_crc16_check_sum  protocol.o
-    0x08003784   0x08003784   0x00000024   Code   RO         6686    i.get_crc8_check_sum  protocol.o
-    0x080037a8   0x080037a8   0x00000008   Code   RO         6326    i.get_pitch_motor_point  cloudmotor.o
-    0x080037b0   0x080037b0   0x00000008   Code   RO         5956    i.get_remote_control_point  remote_control.o
-    0x080037b8   0x080037b8   0x00000008   Code   RO         6327    i.get_yaw_motor_point  cloudmotor.o
-    0x080037c0   0x080037c0   0x000000f4   Code   RO         6328    i.gimbal_behaviour_control_set  cloudmotor.o
-    0x080038b4   0x080038b4   0x0000003e   Code   RO         6329    i.gimbal_motor_relative_angle_control  cloudmotor.o
-    0x080038f2   0x080038f2   0x00000002   PAD
-    0x080038f4   0x080038f4   0x00000128   Code   RO         6617    i.judgement_data_handler  judgement_info.o
-    0x08003a1c   0x08003a1c   0x0000003c   Code   RO         5697    i.laser_configuration  laser.o
-    0x08003a58   0x08003a58   0x00000014   Code   RO         5698    i.laser_off         laser.o
-    0x08003a6c   0x08003a6c   0x00000014   Code   RO         5699    i.laser_on          laser.o
-    0x08003a80   0x08003a80   0x00000060   Code   RO         5391    i.loop_fp32_constrain  user_lib.o
-    0x08003ae0   0x08003ae0   0x00000008   Code   RO            6    i.main              main.o
-    0x08003ae8   0x08003ae8   0x0000006c   Code   RO         6910    i.malloc            mc_w.l(malloc.o)
-    0x08003b54   0x08003b54   0x00000034   Code   RO         6330    i.motor_ecd_to_angle_change  cloudmotor.o
-    0x08003b88   0x08003b88   0x00000048   Code   RO         5894    i.power_ctrl_configuration  power_ctrl.o
-    0x08003bd0   0x08003bd0   0x00000020   Code   RO         5895    i.power_ctrl_off    power_ctrl.o
-    0x08003bf0   0x08003bf0   0x00000020   Code   RO         5896    i.power_ctrl_on     power_ctrl.o
-    0x08003c10   0x08003c10   0x0000005a   Code   RO         5392    i.ramp_calc         user_lib.o
-    0x08003c6a   0x08003c6a   0x00000002   PAD
-    0x08003c6c   0x08003c6c   0x0000002c   Code   RO         5393    i.ramp_init         user_lib.o
-    0x08003c98   0x08003c98   0x00000014   Code   RO         5957    i.remote_control_init  remote_control.o
-    0x08003cac   0x08003cac   0x0000018c   Code   RO         6052    i.shoot_bullet_control  shoot.o
-    0x08003e38   0x08003e38   0x000001ac   Code   RO         6053    i.shoot_control_loop  shoot.o
-    0x08003fe4   0x08003fe4   0x00000064   Code   RO         6054    i.shoot_done_control  shoot.o
-    0x08004048   0x08004048   0x00000208   Code   RO         6055    i.shoot_ready_control  shoot.o
-    0x08004250   0x08004250   0x000000b4   Code   RO         5341    i.uart_init         usart.o
-    0x08004304   0x08004304   0x00000160   Code   RO         6473    i.unpack_fifo_data  communicate.o
-    0x08004464   0x08004464   0x00000040   Code   RO         6687    i.verify_crc16_check_sum  protocol.o
-    0x080044a4   0x080044a4   0x00000030   Code   RO         6688    i.verify_crc8_check_sum  protocol.o
-    0x080044d4   0x080044d4   0x00000018   Data   RO         6057    .constdata          shoot.o
-    0x080044ec   0x080044ec   0x00000030   Data   RO         6332    .constdata          cloudmotor.o
-    0x0800451c   0x0800451c   0x00000020   Data   RO         6414    .constdata          chassismotor.o
-    0x0800453c   0x0800453c   0x00000302   Data   RO         6689    .constdata          protocol.o
-    0x0800483e   0x0800483e   0x00000002   PAD
-    0x08004840   0x08004840   0x00000804   Data   RO         6871    .constdata          arm_cortexM4lf_math.lib(arm_common_tables.o)
-    0x08005044   0x08005044   0x00000020   Data   RO         6962    Region$$Table       anon$$obj.o
+    0x08002bea   0x08002bea   0x00000014   Code   RO         7042    i.__hardfp_fabs     m_wm.l(fabs.o)
+    0x08002bfe   0x08002bfe   0x0000000e   Code   RO         7112    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08002c0c   0x08002c0c   0x00000002   Code   RO         7113    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002c0e   0x08002c0e   0x0000000e   Code   RO         7114    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002c1c   0x08002c1c   0x000000e8   Code   RO         6551    i.chassis_control_loop  chassismotor.o
+    0x08002d04   0x08002d04   0x00000130   Code   RO         6552    i.chassis_feedback_update  chassismotor.o
+    0x08002e34   0x08002e34   0x0000011c   Code   RO         6553    i.chassis_infantry_follow_gimbal_yaw_control  chassismotor.o
+    0x08002f50   0x08002f50   0x000000c8   Code   RO         6554    i.chassis_init      chassismotor.o
+    0x08003018   0x08003018   0x0000015c   Code   RO         6555    i.chassis_rc_to_control_vector  chassismotor.o
+    0x08003174   0x08003174   0x00000100   Code   RO         6556    i.chassis_set_contorl  chassismotor.o
+    0x08003274   0x08003274   0x000000a0   Code   RO         6557    i.chassis_vector_to_mecanum_wheel_speed  chassismotor.o
+    0x08003314   0x08003314   0x0000003c   Code   RO         5271    i.delay_init        delay.o
+    0x08003350   0x08003350   0x0000004c   Code   RO         5273    i.delay_us          delay.o
+    0x0800339c   0x0800339c   0x00000032   Code   RO         6670    i.fifo_s_create     data_fifo.o
+    0x080033ce   0x080033ce   0x00000036   Code   RO         6672    i.fifo_s_get        data_fifo.o
+    0x08003404   0x08003404   0x00000018   Code   RO         6674    i.fifo_s_init       data_fifo.o
+    0x0800341c   0x0800341c   0x00000042   Code   RO         6676    i.fifo_s_put        data_fifo.o
+    0x0800345e   0x0800345e   0x00000010   Code   RO         6678    i.fifo_used_count   data_fifo.o
+    0x0800346e   0x0800346e   0x00000054   Code   RO         5384    i.first_order_filter_cali  user_lib.o
+    0x080034c2   0x080034c2   0x00000002   PAD
+    0x080034c4   0x080034c4   0x00000024   Code   RO         5385    i.first_order_filter_init  user_lib.o
+    0x080034e8   0x080034e8   0x0000002a   Code   RO         5386    i.fp32_constrain    user_lib.o
+    0x08003512   0x08003512   0x00000002   PAD
+    0x08003514   0x08003514   0x00000014   Code   RO         5779    i.fric1_on          fric.o
+    0x08003528   0x08003528   0x00000014   Code   RO         5780    i.fric2_on          fric.o
+    0x0800353c   0x0800353c   0x00000144   Code   RO         5781    i.fric_PWM_configuration  fric.o
+    0x08003680   0x08003680   0x0000001c   Code   RO         5782    i.fric_off          fric.o
+    0x0800369c   0x0800369c   0x000000c4   Code   RO         6264    i.getEncoderData    encoder.o
+    0x08003760   0x08003760   0x0000000c   Code   RO            5    i.get_COUNT_CLOCK   main.o
+    0x0800376c   0x0800376c   0x00000034   Code   RO         6833    i.get_crc16_check_sum  protocol.o
+    0x080037a0   0x080037a0   0x00000024   Code   RO         6834    i.get_crc8_check_sum  protocol.o
+    0x080037c4   0x080037c4   0x00000008   Code   RO         6451    i.get_pitch_motor_point  cloudmotor.o
+    0x080037cc   0x080037cc   0x00000008   Code   RO         5992    i.get_remote_control_point  remote_control.o
+    0x080037d4   0x080037d4   0x00000008   Code   RO         6452    i.get_yaw_motor_point  cloudmotor.o
+    0x080037dc   0x080037dc   0x000000f4   Code   RO         6453    i.gimbal_behaviour_control_set  cloudmotor.o
+    0x080038d0   0x080038d0   0x0000003e   Code   RO         6454    i.gimbal_motor_relative_angle_control  cloudmotor.o
+    0x0800390e   0x0800390e   0x00000002   PAD
+    0x08003910   0x08003910   0x00000128   Code   RO         6765    i.judgement_data_handler  judgement_info.o
+    0x08003a38   0x08003a38   0x0000003c   Code   RO         5697    i.laser_configuration  laser.o
+    0x08003a74   0x08003a74   0x00000014   Code   RO         5698    i.laser_off         laser.o
+    0x08003a88   0x08003a88   0x00000014   Code   RO         5699    i.laser_on          laser.o
+    0x08003a9c   0x08003a9c   0x00000060   Code   RO         5391    i.loop_fp32_constrain  user_lib.o
+    0x08003afc   0x08003afc   0x00000008   Code   RO            6    i.main              main.o
+    0x08003b04   0x08003b04   0x0000006c   Code   RO         7058    i.malloc            mc_w.l(malloc.o)
+    0x08003b70   0x08003b70   0x00000034   Code   RO         6455    i.motor_ecd_to_angle_change  cloudmotor.o
+    0x08003ba4   0x08003ba4   0x00000048   Code   RO         5930    i.power_ctrl_configuration  power_ctrl.o
+    0x08003bec   0x08003bec   0x00000020   Code   RO         5931    i.power_ctrl_off    power_ctrl.o
+    0x08003c0c   0x08003c0c   0x00000020   Code   RO         5932    i.power_ctrl_on     power_ctrl.o
+    0x08003c2c   0x08003c2c   0x0000005a   Code   RO         5392    i.ramp_calc         user_lib.o
+    0x08003c86   0x08003c86   0x00000002   PAD
+    0x08003c88   0x08003c88   0x0000002c   Code   RO         5393    i.ramp_init         user_lib.o
+    0x08003cb4   0x08003cb4   0x00000014   Code   RO         5993    i.remote_control_init  remote_control.o
+    0x08003cc8   0x08003cc8   0x0000018c   Code   RO         6088    i.shoot_bullet_control  shoot.o
+    0x08003e54   0x08003e54   0x000001ac   Code   RO         6089    i.shoot_control_loop  shoot.o
+    0x08004000   0x08004000   0x00000064   Code   RO         6090    i.shoot_done_control  shoot.o
+    0x08004064   0x08004064   0x00000208   Code   RO         6091    i.shoot_ready_control  shoot.o
+    0x0800426c   0x0800426c   0x000000b4   Code   RO         5341    i.uart_init         usart.o
+    0x08004320   0x08004320   0x00000160   Code   RO         6621    i.unpack_fifo_data  communicate.o
+    0x08004480   0x08004480   0x00000040   Code   RO         6835    i.verify_crc16_check_sum  protocol.o
+    0x080044c0   0x080044c0   0x00000030   Code   RO         6836    i.verify_crc8_check_sum  protocol.o
+    0x080044f0   0x080044f0   0x00000018   Data   RO         6093    .constdata          shoot.o
+    0x08004508   0x08004508   0x00000030   Data   RO         6457    .constdata          cloudmotor.o
+    0x08004538   0x08004538   0x00000020   Data   RO         6559    .constdata          chassismotor.o
+    0x08004558   0x08004558   0x00000302   Data   RO         6837    .constdata          protocol.o
+    0x0800485a   0x0800485a   0x00000002   PAD
+    0x0800485c   0x0800485c   0x00000804   Data   RO         7019    .constdata          arm_cortexM4lf_math.lib(arm_common_tables.o)
+    0x08005060   0x08005060   0x00000020   Data   RO         7110    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08005064, Size: 0x000010e0, Max: 0x00030000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08005080, Size: 0x000010e0, Max: 0x00030000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08005064   0x00000004   Data   RW            7    .data               main.o
-    0x20000004   0x08005068   0x00000010   Data   RW         3184    .data               stm32f4xx_rcc.o
-    0x20000014   0x08005078   0x00000004   Data   RW         5275    .data               delay.o
-    0x20000018   0x0800507c   0x00000002   Data   RW         5343    .data               usart.o
-    0x2000001a   0x0800507e   0x00000002   Data   RW         5961    .data               remote_control.o
-    0x2000001c   0x08005080   0x0000001c   Data   RW         6058    .data               shoot.o
-    0x20000038   0x0800509c   0x00000008   Data   RW         6264    .data               control_task.o
-    0x20000040   0x080050a4   0x00000018   Data   RW         6333    .data               cloudmotor.o
-    0x20000058   0x080050bc   0x0000000d   Data   RW         6415    .data               chassismotor.o
-    0x20000065   0x080050c9   0x00000002   Data   RW         6474    .data               communicate.o
-    0x20000067   0x080050cb   0x00000001   PAD
-    0x20000068   0x080050cc   0x0000000d   Data   RW         6648    .data               judgesystem.o
-    0x20000075   0x080050d9   0x00000001   PAD
-    0x20000076   0x080050da   0x00000002   Data   RW         6690    .data               protocol.o
-    0x20000078   0x080050dc   0x00000004   Data   RW         6957    .data               mc_w.l(mvars.o)
-    0x2000007c   0x080050e0   0x00000004   Data   RW         6958    .data               mc_w.l(mvars.o)
+    0x20000000   0x08005080   0x00000004   Data   RW            7    .data               main.o
+    0x20000004   0x08005084   0x00000010   Data   RW         3184    .data               stm32f4xx_rcc.o
+    0x20000014   0x08005094   0x00000004   Data   RW         5275    .data               delay.o
+    0x20000018   0x08005098   0x00000002   Data   RW         5343    .data               usart.o
+    0x2000001a   0x0800509a   0x00000002   Data   RW         5997    .data               remote_control.o
+    0x2000001c   0x0800509c   0x0000001c   Data   RW         6094    .data               shoot.o
+    0x20000038   0x080050b8   0x00000008   Data   RW         6312    .data               control_task.o
+    0x20000040   0x080050c0   0x00000018   Data   RW         6458    .data               cloudmotor.o
+    0x20000058   0x080050d8   0x0000000d   Data   RW         6560    .data               chassismotor.o
+    0x20000065   0x080050e5   0x00000002   Data   RW         6622    .data               communicate.o
+    0x20000067   0x080050e7   0x00000001   PAD
+    0x20000068   0x080050e8   0x0000000d   Data   RW         6796    .data               judgesystem.o
+    0x20000075   0x080050f5   0x00000001   PAD
+    0x20000076   0x080050f6   0x00000002   Data   RW         6838    .data               protocol.o
+    0x20000078   0x080050f8   0x00000004   Data   RW         7105    .data               mc_w.l(mvars.o)
+    0x2000007c   0x080050fc   0x00000004   Data   RW         7106    .data               mc_w.l(mvars.o)
     0x20000080        -       0x000000c8   Zero   RW         5342    .bss                usart.o
-    0x20000148        -       0x0000005e   Zero   RW         5960    .bss                remote_control.o
-    0x200001a6   0x080050e4   0x00000002   PAD
-    0x200001a8        -       0x000000b4   Zero   RW         6056    .bss                shoot.o
-    0x2000025c        -       0x00000220   Zero   RW         6217    .bss                encoder.o
-    0x2000047c        -       0x00000338   Zero   RW         6331    .bss                cloudmotor.o
-    0x200007b4        -       0x00000244   Zero   RW         6413    .bss                chassismotor.o
-    0x200009f8        -       0x00000048   Zero   RW         6618    .bss                judgement_info.o
-    0x20000a40        -       0x000000a0   Zero   RW         6647    .bss                judgesystem.o
+    0x20000148        -       0x0000005e   Zero   RW         5996    .bss                remote_control.o
+    0x200001a6   0x08005100   0x00000002   PAD
+    0x200001a8        -       0x000000b4   Zero   RW         6092    .bss                shoot.o
+    0x2000025c        -       0x00000220   Zero   RW         6265    .bss                encoder.o
+    0x2000047c        -       0x00000338   Zero   RW         6456    .bss                cloudmotor.o
+    0x200007b4        -       0x00000244   Zero   RW         6558    .bss                chassismotor.o
+    0x200009f8        -       0x00000048   Zero   RW         6766    .bss                judgement_info.o
+    0x20000a40        -       0x000000a0   Zero   RW         6795    .bss                judgesystem.o
     0x20000ae0        -       0x00000200   Zero   RW          465    HEAP                startup_stm32f427x.o
     0x20000ce0        -       0x00000400   Zero   RW          464    STACK               startup_stm32f427x.o
 
@@ -2496,10 +2496,10 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        640         36          0          0          0       4216   can.o
-      1756        166         32         13        580      13905   chassismotor.o
-      1722        156         48         24        824      14164   cloudmotor.o
+      1784        164         32         13        580      15029   chassismotor.o
+      1722        156         48         24        824      15424   cloudmotor.o
        352         10          0          2          0       4232   communicate.o
-       180         18          0          8          0       5227   control_task.o
+       180         18          0          8          0       5703   control_task.o
        210          0          0          0          0       3718   data_fifo.o
        136         12          0          4          0       1356   delay.o
        348         46          0          0        544       3058   encoder.o
@@ -2507,7 +2507,7 @@ Image component sizes
        296         14          0          0         72       4206   judgement_info.o
        476         52          0         13        160       2943   judgesystem.o
        100         18          0          0          0       1629   laser.o
-       192         16          0          4          0       4732   main.o
+       192         16          0          4          0       4468   main.o
        180         24          0          0          0     246001   misc.o
        592          8          0          0          0       2534   pid.o
        136         18          0          0          0       1908   power_ctrl.o
@@ -2529,7 +2529,7 @@ Image component sizes
        392          8          0          0          0       5923   user_lib.o
 
     ----------------------------------------------------------------------
-     16570       1218       1336        120       4192     775271   Object Totals
+     16598       1216       1336        120       4192     777867   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         30          0          2          2          2          0   (incl. Padding)
 
@@ -2582,15 +2582,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     17192       1274       3388        128       4192     784331   Grand Totals
-     17192       1274       3388        128       4192     784331   ELF Image Totals
-     17192       1274       3388        128          0          0   ROM Totals
+     17220       1272       3388        128       4192     786927   Grand Totals
+     17220       1272       3388        128       4192     786927   ELF Image Totals
+     17220       1272       3388        128          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                20580 (  20.10kB)
+    Total RO  Size (Code + RO Data)                20608 (  20.13kB)
     Total RW  Size (RW Data + ZI Data)              4320 (   4.22kB)
-    Total ROM Size (Code + RO Data + RW Data)      20708 (  20.22kB)
+    Total ROM Size (Code + RO Data + RW Data)      20736 (  20.25kB)
 
 ==============================================================================
 

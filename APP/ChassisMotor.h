@@ -47,7 +47,7 @@
 //底盘任务控制频率，尚未使用这个宏
 #define CHASSIS_CONTROL_FREQUENCE 1000.0f
 //底盘3508最大can发送电流值
-#define MAX_MOTOR_CAN_CURRENT 8000//16000.0f
+#define MAX_MOTOR_CAN_CURRENT 6000//16000.0f
 //底盘摇摆按键
 #define SWING_KEY KEY_PRESSED_OFFSET_CTRL
 //底盘前后左右控制按键
