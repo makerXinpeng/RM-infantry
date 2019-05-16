@@ -10,8 +10,7 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F427IIHx</Device>
@@ -336,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F427X,__FPU_USED,__FPU_PRESENT,ARM_MATH_CM4,__CC_ARM,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\FWLIB\inc;..\USER;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\FUNCTION\DSP\Include;..\FUNCTION\user_lib;..\FUNCTION\hardware\rc;..\FUNCTION\hardware\can;..\FUNCTION\hardware\rng;..\FUNCTION\hardware\laser;..\FUNCTION\hardware\timer;..\FUNCTION\hardware\fric;..\FUNCTION\hardware\adc;..\FUNCTION\APP\pid;..\FUNCTION\APP\remote_control;..\FUNCTION\APP\CAN_receive;..\FUNCTION\APP\chassis_task;..\FUNCTION\APP\gimbal_task;..\FUNCTION\APP\shoot;..\FUNCTION\hardware\power_ctrl;..\APP;..\FUNCTION\judge_sys</IncludePath>
+              <IncludePath>..\CORE;..\FWLIB\inc;..\USER;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\FUNCTION\DSP\Include;..\FUNCTION\user_lib;..\FUNCTION\hardware\rc;..\FUNCTION\hardware\can;..\FUNCTION\hardware\rng;..\FUNCTION\hardware\laser;..\FUNCTION\hardware\timer;..\FUNCTION\hardware\fric;..\FUNCTION\hardware\adc;..\FUNCTION\APP\pid;..\FUNCTION\APP\remote_control;..\FUNCTION\APP\CAN_receive;..\FUNCTION\APP\chassis_task;..\FUNCTION\APP\gimbal_task;..\FUNCTION\APP\shoot;..\FUNCTION\hardware\power_ctrl;..\APP;..\FUNCTION\judge_sys;..\FUNCTION\APP\INS_task;..\FUNCTION\hardware\spi;..\FUNCTION\hardware\exit_init;..\FUNCTION\AHRS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -670,6 +669,16 @@
               <FileType>1</FileType>
               <FilePath>..\FUNCTION\hardware\adc\adc.c</FilePath>
             </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\hardware\spi\spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>exit_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\hardware\exit_init\exit_init.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -710,6 +719,11 @@
               <FileType>1</FileType>
               <FilePath>..\APP\ChassisMotor.c</FilePath>
             </File>
+            <File>
+              <FileName>INS_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\APP\INS_task\INS_task.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -742,14 +756,43 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>AHRS</GroupName>
+          <Files>
+            <File>
+              <FileName>AHRS_middleware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\AHRS\AHRS_middleware.c</FilePath>
+            </File>
+            <File>
+              <FileName>ist8310driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\AHRS\ist8310driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>ist8310driver_middleware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\AHRS\ist8310driver_middleware.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6500driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\AHRS\mpu6500driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6500driver_middleware.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FUNCTION\AHRS\mpu6500driver_middleware.c</FilePath>
+            </File>
+            <File>
+              <FileName>AHRS.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\FUNCTION\AHRS\AHRS.lib</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>
-
-  <RTE>
-    <apis/>
-    <components/>
-    <files/>
-  </RTE>
 
 </Project>

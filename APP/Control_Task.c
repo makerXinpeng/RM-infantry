@@ -13,6 +13,7 @@
 
 #include "arm_math.h"
 #include "judgement_info.h"
+#include "INS_task.h"
 
 
 #define LimitMax(input, max)   \
@@ -56,6 +57,7 @@ void Control_Task(RC_ctrl_t *Rc)
     {
         count[1]=0;
     }
+		MPU_6500_TASK();
     chassis_control_loop();
     CloudMotor_Ctrl();
 }

@@ -22,7 +22,7 @@
 
 #include "stm32f4xx.h"
 
-#include "buzzer.h"
+//#include "buzzer.h"
 #include "timer.h"
 #include "spi.h"
 #include "exit_init.h"
@@ -33,20 +33,13 @@
 
 #include "AHRS.h"
 
-#include "calibrate_Task.h"
 #include "pid.h"
 
-#include "FreeRTOSConfig.h"
-#include "FreeRTOS.h"
-#include "task.h"
-
-#define IMUWarnBuzzerOn() buzzer_on(95, 10000) //开机陀螺仪校准蜂鸣器
-
-#define IMUWarnBuzzerOFF() buzzer_off() //开机陀螺仪校准蜂鸣器关闭
 
 #define MPU6500_TEMPERATURE_PWM_INIT() TIM3_Init(MPU6500_TEMP_PWM_MAX, 1) //陀螺仪温度控制PWM初始化
 #define IMUTempPWM(pwm) TIM_SetCompare2(TIM3, (pwm))                      //pwm给定
 #define INS_GET_CONTROL_TEMPERATURE() get_control_temperate()             //获取控制温度的目标值
+#define TEMPERATURE 40
 
 #if defined(MPU6500_USE_DATA_READY_EXIT)
 
@@ -78,9 +71,9 @@
 #endif
 
 //如果使用mpu6500的数据准备外部中断，可以使用任务通知方法唤醒任务
-#if defined(MPU6500_USE_DATA_READY_EXIT) || defined(MPU6500_USE_SPI_DMA)
+/*#if defined(MPU6500_USE_DATA_READY_EXIT) || defined(MPU6500_USE_SPI_DMA)
 static TaskHandle_t INSTask_Local_Handler;
-#endif
+#endif*/
 
 //DMA的SPI 发送的buf，以INT_STATUS开始连续读取 DMA_RX_NUM大小地址的值
 #if defined(MPU6500_USE_SPI_DMA)
@@ -128,10 +121,12 @@ static PidTypeDef imuTempPid;
 
 static uint8_t first_temperate = 0;
 
-void INSTask(void *pvParameters)
+static uint8_t updata_count = 0;
+
+void INSTask(void)
 {
 
-    vTaskDelay(INS_TASK_INIT_TIME);
+    //vTaskDelay(INS_TASK_INIT_TIME);
     //初始化mpu6500，失败进入死循环
     while (mpu6500_init() != MPU6500_NO_ERROR)
     {
@@ -146,10 +141,10 @@ void INSTask(void *pvParameters)
     }
 #endif
 
-#if defined(MPU6500_USE_DATA_READY_EXIT) || defined(MPU6500_USE_SPI_DMA)
+/*#if defined(MPU6500_USE_DATA_READY_EXIT) || defined(MPU6500_USE_SPI_DMA)
     //获取当前任务的任务句柄，用于任务通知
     INSTask_Local_Handler = xTaskGetHandle(pcTaskGetName(NULL));
-#endif
+#endif*/
 
 #if defined(MPU6500_USE_DATA_READY_EXIT)
     //初始化mpu6500的数据准备的外部中断
@@ -168,25 +163,156 @@ void INSTask(void *pvParameters)
 
 #endif
 
-    while (1)
-    {
+//				while (1)
+//				{
+
+////			#if defined(MPU6500_USE_DATA_READY_EXIT)
+////						//等待外部中断中断唤醒任务
+////						/*while (ulTaskNotifyTake(pdTRUE, portMAX_DELAY) != pdPASS)
+////						{
+////						}*/
+////			#else
+////						//任务延时切换任务
+////						//vTaskDelayUntil(&INS_LastWakeTime, INS_DELTA_TICK);
+//			//在延时任务切换的情况，开启DMA传输
+//			#ifdef MPU6500_USE_SPI_DMA
+
+//						MPU6500_SPI_NS_L();
+//						MPU6500_SPI_DMA_Enable();
+//						/*while (ulTaskNotifyTake(pdTRUE, portMAX_DELAY) != pdPASS)
+//						{
+//						}*/
+//			#endif
+
+////			#endif
+
+//			//如果不使用SPI的方法，则使用普通SPI通信的方法
+//			#ifndef MPU6500_USE_SPI_DMA
+//						mpu6500_read_muli_reg(MPU_INT_STATUS, mpu6500_spi_rxbuf, DMA_RX_NUM);
+//			#endif
+
+//						//将读取到的mpu6500原始数据处理成国际单位的数据
+//						mpu6500_read_over((mpu6500_spi_rxbuf + MPU6500_RX_BUF_DATA_OFFSET), &mpu6500_real_data);
+
+//			//将读取到的ist8310原始数据处理成国际单位的数据
+//			#if defined(USE_IST8310)
+//						ist8310_read_over((mpu6500_spi_rxbuf + IST8310_RX_BUF_DATA_OFFSET), &ist8310_real_data);
+//			#endif
+//						//减去零漂以及旋转坐标系
+//						IMU_Cali_Slove(INS_gyro, INS_accel, INS_mag, &mpu6500_real_data, &ist8310_real_data);
+
+
+//						//加速度计低通滤波
+//						static fp32 accel_fliter_1[3] = {0.0f, 0.0f, 0.0f};
+//						static fp32 accel_fliter_2[3] = {0.0f, 0.0f, 0.0f};
+//						static fp32 accel_fliter_3[3] = {0.0f, 0.0f, 0.0f};
+//						static const fp32 fliter_num[3] = {1.929454039488895f, -0.93178349823448126f, 0.002329458745586203f};
+
+
+//						//判断是否第一次进入，如果第一次则初始化四元数，之后更新四元数计算角度单位rad
+//						static uint8_t updata_count = 0;
+
+//						if( mpu6500_real_data.status & 1 << MPU_DATA_READY_BIT)
+//						{
+
+//								if (updata_count == 0)
+//								{
+//										MPU6500_TEMPERATURE_PWM_INIT();
+//										PID_Init(&imuTempPid, PID_DELTA, imuTempPID, MPU6500_TEMPERATURE_PID_MAX_OUT, MPU6500_TEMPERATURE_PID_MAX_IOUT);
+
+//										//初始化四元数
+//										AHRS_init(INS_quat, INS_accel, INS_mag);
+//										get_angle(INS_quat, INS_Angle, INS_Angle + 1, INS_Angle + 2);
+
+//										accel_fliter_1[0] = accel_fliter_2[0] = accel_fliter_3[0] = INS_accel[0];
+//										accel_fliter_1[1] = accel_fliter_2[1] = accel_fliter_3[1] = INS_accel[1];
+//										accel_fliter_1[2] = accel_fliter_2[2] = accel_fliter_3[2] = INS_accel[2];
+//										updata_count++;
+//								}
+//								else
+//								{
+//										//加速度计低通滤波
+//										accel_fliter_1[0] = accel_fliter_2[0];
+//										accel_fliter_2[0] = accel_fliter_3[0];
+
+//										accel_fliter_3[0] = accel_fliter_2[0] * fliter_num[0] + accel_fliter_1[0] * fliter_num[1] + INS_accel[0] * fliter_num[2];
+
+//										accel_fliter_1[1] = accel_fliter_2[1];
+//										accel_fliter_2[1] = accel_fliter_3[1];
+
+//										accel_fliter_3[1] = accel_fliter_2[1] * fliter_num[0] + accel_fliter_1[1] * fliter_num[1] + INS_accel[1] * fliter_num[2];
+
+//										accel_fliter_1[2] = accel_fliter_2[2];
+//										accel_fliter_2[2] = accel_fliter_3[2];
+
+//										accel_fliter_3[2] = accel_fliter_2[2] * fliter_num[0] + accel_fliter_1[2] * fliter_num[1] + INS_accel[2] * fliter_num[2];
+
+//										//更新四元数
+//										AHRS_update(INS_quat, TimingTime, INS_gyro, accel_fliter_3, INS_mag);
+//										get_angle(INS_quat, INS_Angle, INS_Angle + 1, INS_Angle + 2);
+
+////										//陀螺仪开机校准
+////										{
+////												static uint16_t start_gyro_cali_time = 0;
+////												if(start_gyro_cali_time == 0)
+////												{
+////														Gyro_Offset[0] = gyro_cali_offset[0];
+////														Gyro_Offset[1] = gyro_cali_offset[1];
+////														Gyro_Offset[2] = gyro_cali_offset[2];
+////														start_gyro_cali_time++;
+////												}
+////												else if (start_gyro_cali_time < GYRO_OFFSET_START_TIME)
+////												{
+////														//IMUWarnBuzzerOn();
+////														if( first_temperate)
+////														{
+////																//当进入gyro_offset函数，如果无运动start_gyro_cali_time++，如果有运动 start_gyro_cali_time = 0
+////																gyro_offset(Gyro_Offset, INS_gyro, mpu6500_real_data.status, &start_gyro_cali_time);
+////														}
+////												}
+////												else if (start_gyro_cali_time == GYRO_OFFSET_START_TIME)
+////												{
+
+////														//IMUWarnBuzzerOFF();
+////														start_gyro_cali_time++;
+////												}
+////										}       //陀螺仪开机校准   code end
+
+//								}           //update count if   code end
+//						}               //mpu6500 status  if end
+//						//请在这里添加例如温度控制代码
+
+//						IMU_temp_Control(mpu6500_real_data.temp);
+
+//			#if INCLUDE_uxTaskGetStackHighWaterMark
+//						INSTaskStack = uxTaskGetStackHighWaterMark(NULL);
+//			#endif
+
+//						//while(1) end
+//				}
+    //task function end
+}
+
+void MPU_6500_TASK(void)
+{
+	
 
 #if defined(MPU6500_USE_DATA_READY_EXIT)
         //等待外部中断中断唤醒任务
-        while (ulTaskNotifyTake(pdTRUE, portMAX_DELAY) != pdPASS)
+        /*while (ulTaskNotifyTake(pdTRUE, portMAX_DELAY) != pdPASS)
         {
-        }
+        }*/
 #else
         //任务延时切换任务
-        vTaskDelayUntil(&INS_LastWakeTime, INS_DELTA_TICK);
+        //vTaskDelayUntil(&INS_LastWakeTime, INS_DELTA_TICK);
 //在延时任务切换的情况，开启DMA传输
 #ifdef MPU6500_USE_SPI_DMA
 
         MPU6500_SPI_NS_L();
         MPU6500_SPI_DMA_Enable();
-        while (ulTaskNotifyTake(pdTRUE, portMAX_DELAY) != pdPASS)
+        /*while (ulTaskNotifyTake(pdTRUE, portMAX_DELAY) != pdPASS)
         {
-        }
+        }*/
 #endif
 
 #endif
@@ -215,7 +341,7 @@ void INSTask(void *pvParameters)
 
 
         //判断是否第一次进入，如果第一次则初始化四元数，之后更新四元数计算角度单位rad
-        static uint8_t updata_count = 0;
+        
 
         if( mpu6500_real_data.status & 1 << MPU_DATA_READY_BIT)
         {
@@ -268,7 +394,7 @@ void INSTask(void *pvParameters)
                     }
                     else if (start_gyro_cali_time < GYRO_OFFSET_START_TIME)
                     {
-                        IMUWarnBuzzerOn();
+                        //IMUWarnBuzzerOn();
                         if( first_temperate)
                         {
                             //当进入gyro_offset函数，如果无运动start_gyro_cali_time++，如果有运动 start_gyro_cali_time = 0
@@ -278,7 +404,7 @@ void INSTask(void *pvParameters)
                     else if (start_gyro_cali_time == GYRO_OFFSET_START_TIME)
                     {
 
-                        IMUWarnBuzzerOFF();
+                        //IMUWarnBuzzerOFF();
                         start_gyro_cali_time++;
                     }
                 }       //陀螺仪开机校准   code end
@@ -294,8 +420,6 @@ void INSTask(void *pvParameters)
 #endif
 
         //while(1) end
-    }
-    //task function end
 }
 
 /**
@@ -367,7 +491,7 @@ static void IMU_temp_Control(fp32 temp)
     static uint8_t temp_constant_time = 0 ;
     if (first_temperate)
     {
-        PID_Calc(&imuTempPid, temp, INS_GET_CONTROL_TEMPERATURE());
+        PID_Calc(&imuTempPid, temp, TEMPERATURE);
         if (imuTempPid.out < 0.0f)
         {
             imuTempPid.out = 0.0f;
@@ -378,7 +502,7 @@ static void IMU_temp_Control(fp32 temp)
     else
     {
         //在没有达到设置的温度，一直最大功率加热
-        if (temp > INS_GET_CONTROL_TEMPERATURE())
+        if (temp > TEMPERATURE)
         {
             temp_constant_time ++;
             if(temp_constant_time > 200)
@@ -433,12 +557,12 @@ void MPU6500_DMA_IRQHandler(void)
         mpu6500_SPI_NS_H();
 
         //唤醒任务
-        if (xTaskGetSchedulerState() != taskSCHEDULER_NOT_STARTED)
+        /*if (xTaskGetSchedulerState() != taskSCHEDULER_NOT_STARTED)
         {
             static BaseType_t xHigherPriorityTaskWoken;
             vTaskNotifyGiveFromISR(INSTask_Local_Handler, &xHigherPriorityTaskWoken);
             portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
-        }
+        }*/
     }
 }
 

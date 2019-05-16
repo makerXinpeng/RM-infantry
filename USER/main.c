@@ -35,6 +35,8 @@
 #include "ChassisMotor.h"
 #include "shoot.h"
 
+#include "INS_Task.h"
+
 #include "remote_control.h"
 #include "judgeSystem.h"
 
@@ -72,6 +74,8 @@ void BSP_init(void)
     TIM6_Configuration();
 
     remote_control_init();
+		//陀螺仪磁力计初始化
+    INSTask();
     
     chassis_init();
     

@@ -51,6 +51,8 @@
 "..\obj\fric.o"
 "..\obj\power_ctrl.o"
 "..\obj\adc.o"
+"..\obj\spi.o"
+"..\obj\exit_init.o"
 "..\obj\remote_control.o"
 "..\obj\pid.o"
 "..\obj\shoot.o"
@@ -58,12 +60,19 @@
 "..\obj\control_task.o"
 "..\obj\cloudmotor.o"
 "..\obj\chassismotor.o"
+"..\obj\ins_task.o"
 "..\obj\communicate.o"
 "..\obj\data_fifo.o"
 "..\obj\judgement_info.o"
 "..\obj\judgesystem.o"
 "..\obj\protocol.o"
+"..\obj\ahrs_middleware.o"
+"..\obj\ist8310driver.o"
+"..\obj\ist8310driver_middleware.o"
+"..\obj\mpu6500driver.o"
+"..\obj\mpu6500driver_middleware.o"
+"..\FUNCTION\AHRS\AHRS.lib"
 --library_type=microlib --strict --scatter "..\OBJ\remote.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\remote.map" -o ..\OBJ\remote.axf

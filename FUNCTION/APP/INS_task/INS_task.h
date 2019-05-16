@@ -21,7 +21,7 @@
 #define INS_Task_H
 #include "main.h"
 
-#define USE_IST8310 //是否使用IST8310磁力计，不使用注释定义
+//#define USE_IST8310 //是否使用IST8310磁力计，不使用注释定义
 
 #define MPU6500_USE_DATA_READY_EXIT //是否使用MPU6500的外部中断，不使用注释定义
 
@@ -74,12 +74,14 @@
 #define INS_ACCEL_Y_ADDRESS_OFFSET 1
 #define INS_ACCEL_Z_ADDRESS_OFFSET 2
 
-extern void INSTask(void *pvParameters);
+extern void INSTask(void);
 
 extern void INS_cali_gyro(fp32 cali_scale[3], fp32 cali_offset[3], uint16_t *time_count);
 extern void INS_set_cali_gyro(fp32 cali_scale[3], fp32 cali_offset[3]);
 extern const fp32 *get_INS_angle_point(void);
 extern const fp32 *get_MPU6500_Gyro_Data_Point(void);
 extern const fp32 *get_MPU6500_Accel_Data_Point(void);
+
+extern void MPU_6500_TASK(void);
 
 #endif

@@ -62,6 +62,7 @@
 ..\obj\main.o: ..\FUNCTION\APP\shoot\shoot.h
 ..\obj\main.o: ..\APP\CloudMotor.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\judgement_info.h
+..\obj\main.o: ..\FUNCTION\APP\INS_task\INS_Task.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\judgeSystem.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\data_fifo.h
 ..\obj\main.o: ..\FUNCTION\judge_sys\protocol.h

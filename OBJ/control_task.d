@@ -59,3 +59,4 @@
 ..\obj\control_task.o: ..\APP\ChassisMotor.h
 ..\obj\control_task.o: ..\FUNCTION\judge_sys\judgement_info.h
 ..\obj\control_task.o: ..\SYSTEM\delay\delay.h
+..\obj\control_task.o: ..\FUNCTION\APP\INS_task\INS_task.h
