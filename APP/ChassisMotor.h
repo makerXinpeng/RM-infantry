@@ -12,8 +12,7 @@
 #include "arm_math.h"
 #include "judgement_info.h"
 
-#define CHASSIS_MAXSPEED 78
-
+#define CHASSIS_MAXSPEED 1550
 //前后的遥控器通道号码
 #define CHASSIS_X_CHANNEL 3
 //左右的遥控器通道号码
